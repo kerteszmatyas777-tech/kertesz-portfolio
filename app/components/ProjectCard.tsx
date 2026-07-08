@@ -18,49 +18,39 @@ export default function ProjectCard({
 }: Props) {
   if (mobile) {
     return (
-      <Link href={`/projects/${slug}`} className="block group">
-
+      <Link href={`/projects/${slug}`} className="group block">
         <p className="text-xs uppercase tracking-[0.35em] text-slate-500">
           {category}
         </p>
 
-        <h3 className="mt-5 text-5xl font-bold leading-[0.9] tracking-[-0.05em] text-[var(--primary)]">
-          {title}
-        </h3>
+        <div className="mt-4 flex items-start justify-between gap-4">
+          <h3 className="text-5xl font-bold leading-[0.9] tracking-[-0.05em] text-[var(--primary)]">
+            {title}
+          </h3>
+
+          <span className="mt-2 text-3xl text-[var(--primary)] transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
+            ↗
+          </span>
+        </div>
 
         <div className="relative mt-8 aspect-[4/5] overflow-hidden rounded-[32px]">
-
           <Image
             src={image}
             alt={title}
             fill
             sizes="100vw"
-            className="object-cover transition duration-700 group-hover:scale-105"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
-
         </div>
-
-        <div className="mt-6 flex items-center gap-3 font-semibold text-[var(--primary)]">
-
-          <span>View Project</span>
-
-          <span className="transition-transform duration-300 group-hover:translate-x-2">
-            →
-          </span>
-
-        </div>
-
       </Link>
     );
   }
 
   return (
-    <Link href={`/projects/${slug}`} className="block group">
-
+    <Link href={`/projects/${slug}`} className="group block">
       <div className="overflow-hidden rounded-[32px] bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
         <div className="relative aspect-[16/10] overflow-hidden">
-
           <Image
             src={image}
             alt={title}
@@ -68,7 +58,6 @@ export default function ProjectCard({
             sizes="(max-width:768px)100vw,50vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
-
         </div>
 
         <div className="p-8">
@@ -77,16 +66,14 @@ export default function ProjectCard({
             {category}
           </p>
 
-          <h3 className="mt-4 text-3xl font-bold text-[var(--primary)]">
-            {title}
-          </h3>
+          <div className="mt-5 flex items-start justify-between gap-4">
 
-          <div className="mt-8 flex items-center gap-3 font-semibold text-[var(--primary)]">
+            <h3 className="text-3xl font-bold tracking-[-0.03em] text-[var(--primary)] transition duration-300 group-hover:translate-x-1">
+              {title}
+            </h3>
 
-            <span>View Project</span>
-
-            <span className="transition-transform duration-300 group-hover:translate-x-2">
-              →
+            <span className="text-3xl text-[var(--primary)] transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
+              ↗
             </span>
 
           </div>
@@ -94,7 +81,6 @@ export default function ProjectCard({
         </div>
 
       </div>
-
     </Link>
   );
 }
