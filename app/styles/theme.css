@@ -1,0 +1,23 @@
+:root {
+  /* Brand */
+  --primary: #113B8E;
+  --primary-hover: #0C3176;
+  --primary-soft: #EAF2FF;
+
+  /* Neutral */
+  --background: #FAFBFD;
+  --surface: #FFFFFF;
+
+  --text: #202124;
+  --muted: #6B7280;
+
+  /* Radius */
+  --radius: 32px;
+
+  /* Shadow */
+  --shadow-card:
+    0 10px 30px rgba(17,59,142,.06);
+
+  --shadow-hover:
+    0 30px 60px rgba(17,59,142,.12);
+}
