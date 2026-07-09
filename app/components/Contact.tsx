@@ -1,4 +1,12 @@
+"use client";
+
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../data/translations";
+
 export default function Contact() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section
       id="contact"
@@ -7,13 +15,16 @@ export default function Contact() {
       <div className="mx-auto max-w-[1500px] px-8 lg:px-20">
 
         <p className="uppercase tracking-[0.4em] text-xs text-slate-500">
-          CONTACT
+          {t.contact.eyebrow}
         </p>
 
         <h2 className="mt-6 max-w-4xl text-6xl font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)] md:text-7xl">
-          Let's create
-          <br />
-          something memorable.
+          {t.contact.titleLines.map((line) => (
+            <span key={line}>
+              {line}
+              <br />
+            </span>
+          ))}
         </h2>
 
         <div className="mt-24 grid gap-20 lg:grid-cols-2">
@@ -21,7 +32,7 @@ export default function Contact() {
           <div>
 
             <p className="text-xl leading-9 text-slate-600">
-              Have a project in mind? I'd love to hear about it.
+              {t.contact.description}
             </p>
 
             <a

@@ -1,8 +1,14 @@
-import FadeIn from "./FadeIn";
+"use client";
+
 import ProjectCard from "./ProjectCard";
 import { projects } from "../data/projects";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../data/translations";
 
 export default function Projects() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section
       id="work"
@@ -11,11 +17,11 @@ export default function Projects() {
       {/* Heading */}
 
       <p className="uppercase tracking-[0.45em] text-xs text-slate-500">
-        PORTFOLIO
+        {t.projects.eyebrow}
       </p>
 
       <h2 className="mt-6 text-4xl font-bold text-[var(--primary)] md:text-6xl">
-        Selected Work
+        {t.projects.title}
       </h2>
 
       {/* Mobile */}
@@ -49,10 +55,3 @@ export default function Projects() {
     </section>
   );
 }
-<FadeIn>
-
-<section>
-...
-</section>
-
-</FadeIn>

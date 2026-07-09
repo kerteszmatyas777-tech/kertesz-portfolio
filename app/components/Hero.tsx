@@ -3,8 +3,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import BackgroundPattern from "./BackgroundPattern";
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/data/translations";
 
 export default function Hero() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="relative overflow-hidden bg-[#F8F9FB]">
       <BackgroundPattern />
@@ -18,7 +23,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-xs uppercase tracking-[0.4em] text-[var(--primary)]/70"
         >
-          Brand Identity Designer
+          {t.hero.eyebrow}
         </motion.p>
 
         <motion.h1
@@ -27,13 +32,12 @@ export default function Hero() {
           transition={{ delay: 0.1 }}
           className="mt-8 text-[5rem] font-bold leading-[0.84] tracking-[-0.08em] text-[var(--primary)]"
         >
-          Designing
-          <br />
-          brands
-          <br />
-          people
-          <br />
-          remember.
+          {t.hero.mobileTitle.map((line) => (
+            <span key={line}>
+              {line}
+              <br />
+            </span>
+          ))}
         </motion.h1>
 
         <motion.p
@@ -42,17 +46,17 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="mt-8 max-w-xs text-lg leading-8 text-slate-600"
         >
-          Strategic branding and visual identity for ambitious businesses.
+          {t.hero.mobileDescription}
         </motion.p>
 
         <div className="mt-12 flex flex-col gap-4">
 
           <button className="rounded-full bg-[var(--primary)] px-10 py-5 text-lg font-semibold text-white transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-2xl active:scale-[0.98]">
-            View Projects
+            {t.hero.projects}
           </button>
 
           <button className="rounded-full border border-[var(--primary)] px-10 py-5 text-lg font-semibold text-[var(--primary)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]">
-            Get in Touch
+            {t.hero.contact}
           </button>
 
         </div>
@@ -66,7 +70,7 @@ export default function Hero() {
           <div className="relative aspect-[4/5] w-56 overflow-hidden rounded-[36px] shadow-2xl">
 
             <Image
-              src="/images/profile.png"
+              src="/images/profile2.png"
               alt="Kertész Mátyás"
               fill
               priority
@@ -89,29 +93,25 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <p className="mb-6 text-sm uppercase tracking-[0.4em] text-[var(--primary)]/70">
-            Brand Identity Designer
+            {t.hero.eyebrow}
           </p>
 
           <h1 className="text-[7rem] font-bold leading-[0.88] tracking-[-0.05em] text-[var(--primary)]">
-            Designing brands
-            <br />
-            people remember.
+            {t.hero.title}
           </h1>
 
           <p className="mt-10 max-w-xl text-lg leading-8 text-slate-600">
-            I create strategic brand identities, print design and visual
-            communication for cafés, restaurants, gyms and ambitious
-            businesses that want to stand out.
+            {t.hero.description}
           </p>
 
           <div className="mt-12 flex gap-5">
 
             <button className="rounded-full bg-[var(--primary)] px-10 py-5 text-lg font-semibold text-white transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-2xl active:scale-[0.98]">
-              View Projects
+              {t.hero.projects}
             </button>
 
             <button className="rounded-full border border-[var(--primary)] px-10 py-5 text-lg font-semibold text-[var(--primary)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]">
-              Get in Touch
+              {t.hero.contact}
             </button>
 
           </div>
@@ -127,7 +127,7 @@ export default function Hero() {
           <div className="relative aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-[40px] shadow-2xl">
 
             <Image
-              src="/images/profile.png"
+              src="/images/profile2.png"
               alt="Kertész Mátyás"
               fill
               priority

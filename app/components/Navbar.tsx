@@ -1,10 +1,15 @@
 "use client";
 
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/data/translations";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,10 +35,13 @@ export default function Navbar() {
           {/* Logo */}
 
           <a href="#">
-            <img
+            <Image
               src="/logo.png"
               alt="Logo"
+              width={96}
+              height={96}
               className="h-16 w-auto lg:h-24"
+              priority
             />
           </a>
 
@@ -45,29 +53,45 @@ export default function Navbar() {
               href="#work"
               className="font-medium text-[var(--primary)] transition hover:opacity-60"
             >
-              Work
+              {t.nav.work}
             </a>
 
             <a
               href="#services"
               className="font-medium text-[var(--primary)] transition hover:opacity-60"
             >
-              Services
+              {t.nav.services}
             </a>
 
             <a
               href="#about"
               className="font-medium text-[var(--primary)] transition hover:opacity-60"
             >
-              About
+              {t.nav.about}
             </a>
 
             <a
               href="#contact"
               className="font-medium text-[var(--primary)] transition hover:opacity-60"
             >
-              Contact
+              {t.nav.contact}
             </a>
+
+            <div className="flex gap-3 text-sm font-semibold text-[var(--primary)]">
+              <button
+                onClick={() => setLanguage("en")}
+                className={language === "en" ? "" : "opacity-40"}
+              >
+                EN
+              </button>
+
+              <button
+                onClick={() => setLanguage("hu")}
+                className={language === "hu" ? "" : "opacity-40"}
+              >
+                HU
+              </button>
+            </div>
 
           </div>
 
@@ -101,7 +125,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="block text-6xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)]"
           >
-            Work
+            {t.nav.work}
           </a>
 
           <a
@@ -109,7 +133,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="block text-6xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)]"
           >
-            Services
+            {t.nav.services}
           </a>
 
           <a
@@ -117,7 +141,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="block text-6xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)]"
           >
-            About
+            {t.nav.about}
           </a>
 
           <a
@@ -125,7 +149,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="block text-6xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)]"
           >
-            Contact
+            {t.nav.contact}
           </a>
 
         </div>
@@ -137,8 +161,19 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
 
             <div className="flex gap-6 text-lg font-semibold text-[var(--primary)]">
-              <button>EN</button>
-              <button className="opacity-40">HU</button>
+              <button
+                onClick={() => setLanguage("en")}
+                className={language === "en" ? "" : "opacity-40"}
+              >
+                EN
+              </button>
+
+              <button
+                onClick={() => setLanguage("hu")}
+                className={language === "hu" ? "" : "opacity-40"}
+              >
+                HU
+              </button>
             </div>
 
             <p className="text-sm tracking-[0.3em] uppercase text-slate-400">

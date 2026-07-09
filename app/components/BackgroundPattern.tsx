@@ -10,60 +10,20 @@ export default function BackgroundPattern() {
           scale: [1, 1.02, 1],
         }}
         transition={{
-          duration: 20,
+          duration: 24,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -right-[850px] top-1/2 -translate-y-1/2 w-[1800px] h-[1800px]"
-        viewBox="0 0 1800 1800"
+        className="absolute -right-[720px] top-1/2 h-[1500px] w-[1500px] -translate-y-1/2 lg:-right-[620px] lg:h-[1750px] lg:w-[1750px]"
+        viewBox="0 0 1750 1750"
         fill="none"
       >
-        <defs>
-          <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#113B8E" stopOpacity="0.04" />
-            <stop offset="100%" stopColor="#B9CAE8" stopOpacity="0.45" />
-          </linearGradient>
-        </defs>
-
-        <circle
-          cx="900"
-          cy="900"
-          r="820"
-          stroke="url(#ring)"
-          strokeWidth="60"
-        />
-
-        <circle
-          cx="900"
-          cy="900"
-          r="700"
-          stroke="url(#ring)"
-          strokeWidth="60"
-        />
-
-        <circle
-          cx="900"
-          cy="900"
-          r="580"
-          stroke="url(#ring)"
-          strokeWidth="60"
-        />
-
-        <circle
-          cx="900"
-          cy="900"
-          r="460"
-          stroke="url(#ring)"
-          strokeWidth="60"
-        />
-
-        <circle
-          cx="900"
-          cy="900"
-          r="340"
-          stroke="url(#ring)"
-          strokeWidth="60"
-        />
+        <circle cx="875" cy="875" r="875" fill="#113B8E" opacity="0.07" />
+        <circle cx="875" cy="875" r="765" fill="#294B98" opacity="0.08" />
+        <circle cx="875" cy="875" r="655" fill="#536CAA" opacity="0.1" />
+        <circle cx="875" cy="875" r="545" fill="#7C8BBC" opacity="0.13" />
+        <circle cx="875" cy="875" r="435" fill="#A4AACD" opacity="0.18" />
+        <circle cx="875" cy="875" r="325" fill="#C9CADF" opacity="0.28" />
       </motion.svg>
     </div>
   );
