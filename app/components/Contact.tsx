@@ -43,14 +43,14 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-white py-28 lg:py-40">
+    <section id="contact" className="bg-white pt-20 pb-28 lg:pt-28 lg:pb-40">
       <div className="mx-auto max-w-[1500px] px-6 lg:px-20">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
           {t.contact.eyebrow}
         </p>
 
         <div className="mt-6 grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-          <div className="flex flex-col justify-between">
+          <div className="min-w-0 flex flex-col justify-between">
             <div>
               <h2 className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)] md:text-7xl">
                 {t.contact.titleLines.map((line) => (
@@ -66,37 +66,76 @@ export default function Contact() {
 
               <a
                 href="mailto:kerteszmatyas777@gmail.com"
-                className="mt-10 inline-block text-2xl font-bold tracking-[-0.03em] text-[var(--primary)] transition hover:opacity-70"
+                className="mt-10 block max-w-full break-words text-[clamp(1.15rem,5.5vw,2rem)] font-bold leading-tight tracking-[-0.03em] text-[var(--primary)] transition hover:opacity-70"
               >
                 kerteszmatyas777@gmail.com
               </a>
             </div>
 
-            <div className="mt-14 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-[var(--primary)] lg:mt-24">
+            <div className="mt-14 flex flex-wrap gap-3 lg:mt-24">
               <a
                 href="https://www.instagram.com/kerteszmatyas_grafikus/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition hover:opacity-60"
+                aria-label="Instagram"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-lg"
               >
-                Instagram
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-5 w-5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+                </svg>
               </a>
 
-              <a href="#" className="transition hover:opacity-60">
-                Behance
+              <a
+                href="https://www.linkedin.com/in/m%C3%A1ty%C3%A1s-kert%C3%A9sz-89856a267"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-lg"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-5 w-5"
+                >
+                  <path d="M6.3 8.6H3.2V20h3.1V8.6ZM4.75 3.7A1.8 1.8 0 1 0 4.75 7.3a1.8 1.8 0 0 0 0-3.6ZM20.8 13.5c0-3.44-1.84-5.04-4.3-5.04-1.98 0-2.86 1.09-3.35 1.86V8.6h-3.1V20h3.1v-5.65c0-1.49.28-2.93 2.12-2.93 1.81 0 1.83 1.69 1.83 3.03V20h3.1v-6.5Z" />
+                </svg>
               </a>
 
-              <a href="#" className="transition hover:opacity-60">
-                LinkedIn
+              <a
+                href="https://www.facebook.com/profile.php?id=61571713991529"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-lg"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-5 w-5"
+                >
+                  <path d="M13.6 21v-7h2.45l.36-2.8H13.6V9.42c0-.81.23-1.36 1.4-1.36h1.5V5.55c-.26-.04-1.15-.12-2.19-.12-2.17 0-3.65 1.32-3.65 3.75v2.08H8v2.8h2.66v7h2.94Z" />
+                </svg>
               </a>
             </div>
           </div>
 
           <form
+            id="project-brief"
             onSubmit={handleSubmit}
-            className="rounded-[32px] border border-[var(--primary)]/10 bg-[#F8F9FB] p-6 sm:p-8 lg:p-10"
+            className="min-w-0 scroll-mt-28 rounded-[32px] border border-[var(--primary)]/10 bg-[#F8F9FB] p-6 sm:p-8 lg:p-10"
           >
-            <h3 className="text-3xl font-bold leading-[0.98] tracking-[-0.04em] text-[var(--primary)] md:text-4xl">
+            <h3 className="text-[2.35rem] font-bold leading-[0.94] tracking-[-0.045em] text-[var(--primary)] md:text-4xl">
               {t.contact.form.title}
             </h3>
 
@@ -112,7 +151,7 @@ export default function Contact() {
               </label>
 
               <label className="block">
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                <span className="text-[0.95rem] font-semibold uppercase tracking-[0.12em] text-slate-500 lg:text-xs lg:tracking-[0.18em]">
                   {t.contact.form.nameLabel}
                 </span>
                 <input
@@ -120,12 +159,12 @@ export default function Contact() {
                   value={name}
                   onChange={(event) => setName(event.target.value)}
                   autoComplete="name"
-                  className="mt-3 w-full border-b border-[var(--primary)]/20 bg-transparent py-3 text-[var(--primary)] outline-none transition placeholder:text-slate-400 focus:border-[var(--primary)]"
+                  className="mt-3 w-full border-b border-[var(--primary)]/20 bg-transparent py-3 text-lg text-[var(--primary)] outline-none transition placeholder:text-slate-400 focus:border-[var(--primary)] lg:text-base"
                 />
               </label>
 
               <label className="block">
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                <span className="text-[0.95rem] font-semibold uppercase tracking-[0.12em] text-slate-500 lg:text-xs lg:tracking-[0.18em]">
                   {t.contact.form.emailLabel}
                 </span>
                 <input
@@ -134,19 +173,19 @@ export default function Contact() {
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   autoComplete="email"
-                  className="mt-3 w-full border-b border-[var(--primary)]/20 bg-transparent py-3 text-[var(--primary)] outline-none transition placeholder:text-slate-400 focus:border-[var(--primary)]"
+                  className="mt-3 w-full border-b border-[var(--primary)]/20 bg-transparent py-3 text-lg text-[var(--primary)] outline-none transition placeholder:text-slate-400 focus:border-[var(--primary)] lg:text-base"
                 />
               </label>
 
               <label className="block">
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                <span className="text-[0.95rem] font-semibold uppercase tracking-[0.12em] text-slate-500 lg:text-xs lg:tracking-[0.18em]">
                   {t.contact.form.serviceLabel}
                 </span>
                 <select
                   required
                   value={service}
                   onChange={(event) => setService(event.target.value)}
-                  className="mt-3 w-full appearance-none border-b border-[var(--primary)]/20 bg-transparent py-3 text-[var(--primary)] outline-none transition focus:border-[var(--primary)]"
+                  className="mt-3 w-full appearance-none border-b border-[var(--primary)]/20 bg-transparent py-3 text-lg text-[var(--primary)] outline-none transition focus:border-[var(--primary)] lg:text-base"
                 >
                   <option value="" disabled>
                     {t.contact.form.selectPlaceholder}
@@ -160,14 +199,14 @@ export default function Contact() {
               </label>
 
               <label className="block">
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                <span className="text-[0.95rem] font-semibold uppercase tracking-[0.12em] text-slate-500 lg:text-xs lg:tracking-[0.18em]">
                   {t.contact.form.budgetLabel}
                 </span>
                 <select
                   required
                   value={budget}
                   onChange={(event) => setBudget(event.target.value)}
-                  className="mt-3 w-full appearance-none border-b border-[var(--primary)]/20 bg-transparent py-3 text-[var(--primary)] outline-none transition focus:border-[var(--primary)]"
+                  className="mt-3 w-full appearance-none border-b border-[var(--primary)]/20 bg-transparent py-3 text-lg text-[var(--primary)] outline-none transition focus:border-[var(--primary)] lg:text-base"
                 >
                   <option value="" disabled>
                     {t.contact.form.selectPlaceholder}
@@ -182,7 +221,7 @@ export default function Contact() {
             </div>
 
             <label className="mt-8 block">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+              <span className="text-[0.95rem] font-semibold uppercase tracking-[0.12em] text-slate-500 lg:text-xs lg:tracking-[0.18em]">
                 {t.contact.form.messageLabel}
               </span>
               <textarea
@@ -191,24 +230,25 @@ export default function Contact() {
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 placeholder={t.contact.form.messagePlaceholder}
-                className="mt-3 w-full resize-none border-b border-[var(--primary)]/20 bg-transparent py-3 text-[var(--primary)] outline-none transition placeholder:text-slate-400 focus:border-[var(--primary)]"
+                className="mt-3 w-full resize-none border-b border-[var(--primary)]/20 bg-transparent py-3 text-lg leading-7 text-[var(--primary)] outline-none transition placeholder:text-slate-400 focus:border-[var(--primary)] lg:text-base"
               />
             </label>
 
             <button
               type="submit"
               disabled={status === "sending"}
-              className="mt-10 w-full rounded-full bg-[var(--primary)] px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 disabled:cursor-wait disabled:opacity-70"
+              className="mx-auto mt-10 block w-fit rounded-full bg-[var(--primary)] px-7 py-3 text-xl font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 disabled:cursor-wait disabled:opacity-70 lg:w-full lg:px-8 lg:py-4 lg:text-base"
             >
               {status === "sending" ? t.contact.form.sending : t.contact.form.submit}
             </button>
 
             {status !== "idle" && status !== "sending" && (
               <p
-                className={`mt-5 text-sm leading-6 ${
+                className={`mt-5 text-base leading-6 lg:text-sm ${
                   status === "success" ? "text-emerald-700" : "text-red-600"
                 }`}
-                role="status"
+                role={status === "success" ? "status" : "alert"}
+                aria-live="polite"
               >
                 {status === "success" ? t.contact.form.success : t.contact.form.error}
               </p>

@@ -56,7 +56,7 @@ export default function Projects() {
   return (
     <section
       id="work"
-      className="mx-auto max-w-[1600px] px-6 py-28 lg:px-24 lg:py-40"
+      className="mx-auto max-w-[1600px] px-6 pt-28 pb-20 lg:px-24 lg:pt-40 lg:pb-28"
     >
       {/* Heading */}
 

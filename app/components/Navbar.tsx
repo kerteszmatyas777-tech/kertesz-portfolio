@@ -3,20 +3,18 @@
 import { useLanguage } from "@/app/context/LanguageContext";
 import { translations } from "@/app/data/translations";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
-  const router = useRouter();
   const t = translations[language];
 
   const handleMobileLanguageChange = (nextLanguage: typeof language) => {
     setLanguage(nextLanguage);
     setOpen(false);
-    router.push("/");
   };
 
   useEffect(() => {
@@ -42,52 +40,53 @@ export default function Navbar() {
 
           {/* Logo */}
 
-          <a href="#">
+          <Link href="/" aria-label="Kertész Mátyás homepage">
             <Image
               src="/logo.png"
-              alt="Logo"
+              alt=""
               width={96}
               height={96}
               className="h-16 w-auto lg:h-24"
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop */}
 
           <div className="hidden items-center gap-12 md:flex">
 
-            <a
-              href="#work"
+            <Link
+              href="/#work"
               className="font-medium text-[var(--primary)] transition hover:opacity-60"
             >
               {t.nav.work}
-            </a>
+            </Link>
 
-            <a
-              href="#services"
+            <Link
+              href="/#services"
               className="font-medium text-[var(--primary)] transition hover:opacity-60"
             >
               {t.nav.services}
-            </a>
+            </Link>
 
-            <a
-              href="#about"
+            <Link
+              href="/#about"
               className="font-medium text-[var(--primary)] transition hover:opacity-60"
             >
               {t.nav.about}
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="font-medium text-[var(--primary)] transition hover:opacity-60"
             >
               {t.nav.contact}
-            </a>
+            </Link>
 
             <div className="flex gap-3 text-sm font-semibold text-[var(--primary)]">
               <button
                 onClick={() => setLanguage("en")}
+                aria-pressed={language === "en"}
                 className={language === "en" ? "" : "opacity-40"}
               >
                 EN
@@ -95,6 +94,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => setLanguage("hu")}
+                aria-pressed={language === "hu"}
                 className={language === "hu" ? "" : "opacity-40"}
               >
                 HU
@@ -108,6 +108,8 @@ export default function Navbar() {
           <button
             onClick={() => setOpen(!open)}
             aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
             className="relative h-10 w-10 md:hidden"
           >
             <span
@@ -128,6 +130,9 @@ export default function Navbar() {
       {/* MOBILE MENU */}
 
       <div
+        id="mobile-navigation"
+        aria-hidden={!open}
+        inert={!open}
         className={`fixed inset-0 z-40 flex flex-col justify-between overflow-x-hidden bg-[#F8F9FB] px-6 pt-32 pb-10 transition-all duration-500 ${
           open
             ? "translate-y-0 opacity-100"
@@ -138,37 +143,37 @@ export default function Navbar() {
 
         <div className="space-y-6">
 
-          <a
-            href="#work"
+          <Link
+            href="/#work"
             onClick={() => setOpen(false)}
             className="block max-w-full whitespace-nowrap text-[clamp(2rem,10vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.work}
-          </a>
+          </Link>
 
-          <a
-            href="#services"
+          <Link
+            href="/#services"
             onClick={() => setOpen(false)}
             className="block max-w-full whitespace-nowrap text-[clamp(2rem,10vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.services}
-          </a>
+          </Link>
 
-          <a
-            href="#about"
+          <Link
+            href="/#about"
             onClick={() => setOpen(false)}
             className="block max-w-full whitespace-nowrap text-[clamp(2rem,10vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.about}
-          </a>
+          </Link>
 
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="block max-w-full whitespace-nowrap text-[clamp(2rem,10vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.contact}
-          </a>
+          </Link>
 
         </div>
 
@@ -181,6 +186,7 @@ export default function Navbar() {
             <div className="flex gap-6 text-lg font-semibold text-[var(--primary)]">
               <button
                 onClick={() => handleMobileLanguageChange("en")}
+                aria-pressed={language === "en"}
                 className={language === "en" ? "" : "opacity-40"}
               >
                 EN
@@ -188,6 +194,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => handleMobileLanguageChange("hu")}
+                aria-pressed={language === "hu"}
                 className={language === "hu" ? "" : "opacity-40"}
               >
                 HU

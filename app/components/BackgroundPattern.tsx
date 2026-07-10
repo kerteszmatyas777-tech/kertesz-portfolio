@@ -14,7 +14,7 @@ export default function BackgroundPattern() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -right-[860px] top-1/2 h-[1500px] w-[1500px] -translate-y-1/2 lg:-right-[780px] lg:h-[1750px] lg:w-[1750px]"
+        className="absolute -right-[1140px] top-1/2 h-[1500px] w-[1500px] -translate-y-1/2 lg:-right-[920px] lg:h-[2100px] lg:w-[2100px]"
         viewBox="0 0 1750 1750"
         fill="none"
       >

@@ -4,19 +4,18 @@ import { Project } from "@/app/data/projects";
 
 type Props = {
   project: Project;
+  label: string;
 };
 
-export default function NextProject({ project }: Props) {
+export default function NextProject({ project, label }: Props) {
   return (
     <Link
       href={`/projects/${project.slug}`}
       className="group mt-40 block"
     >
-      <p className="uppercase tracking-[0.35em] text-xs text-slate-400">
-        Next Project
-      </p>
+      <p className="text-xs uppercase tracking-[0.3em] text-slate-400">{label}</p>
 
-      <h2 className="mt-4 text-5xl font-bold text-[var(--primary)]">
+      <h2 className="mt-4 break-words text-4xl font-bold tracking-[-0.04em] text-[var(--primary)] sm:text-5xl">
         {project.title}
       </h2>
 
@@ -25,7 +24,7 @@ export default function NextProject({ project }: Props) {
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover transition duration-700 group-hover:scale-105"
+        className="object-cover transition duration-700 group-hover:scale-105"
         />
       </div>
     </Link>

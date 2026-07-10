@@ -8,6 +8,9 @@ type ContactPayload = {
 };
 
 const MAX_FIELD_LENGTH = 2_000;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1_000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const requestLog = new Map<string, number[]>();
 
 function getValue(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -27,11 +30,38 @@ function escapeHtml(value: string) {
   });
 }
 
+function isRateLimited(request: Request) {
+  const clientIp = request.headers
+    .get("x-forwarded-for")
+    ?.split(",")[0]
+    ?.trim() || "unknown";
+  const now = Date.now();
+  const recentRequests = (requestLog.get(clientIp) ?? []).filter(
+    (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS
+  );
+
+  if (recentRequests.length >= RATE_LIMIT_MAX_REQUESTS) {
+    requestLog.set(clientIp, recentRequests);
+    return true;
+  }
+
+  recentRequests.push(now);
+  requestLog.set(clientIp, recentRequests);
+  return false;
+}
+
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
 
   if (origin && origin !== new URL(request.url).origin) {
     return Response.json({ error: "Invalid request origin." }, { status: 403 });
+  }
+
+  if (isRateLimited(request)) {
+    return Response.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
   }
 
   let payload: ContactPayload;

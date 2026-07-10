@@ -27,6 +27,18 @@ export const translations = {
       nextProject: "Next project",
       projectPagination: "Project navigation",
       goToProject: "Go to project",
+      detail: {
+        overview: "Overview",
+        services: "Services",
+        colours: "Brand colours",
+        challenge: "Challenge",
+        solution: "Solution",
+        nextProject: "Next project",
+        viewImage: "View image",
+        closePreview: "Close image preview",
+        previousImage: "Previous image",
+        nextImage: "Next image",
+      },
     },
 
     about: {
@@ -44,18 +56,58 @@ export const translations = {
     services: {
       eyebrow: "Services",
       title: "What I can help you with",
+      page: {
+        deliverables: "What’s included",
+        outcome: "The outcome",
+        ctaTitle: "Have a project in mind?",
+        ctaDescription: "Tell me what you’re building, and let’s find the right direction for it.",
+        cta: "Start a conversation",
+      },
       items: [
         {
+          slug: "brand-identity",
           title: "Brand Identity",
           description: "Logos, visual identity systems and brand guidelines.",
+          intro:
+            "A clear identity gives your business a recognisable point of view — across every place people meet your brand.",
+          deliverables: [
+            "Brand direction and visual territory",
+            "Logo and core visual system",
+            "Typography, colour and supporting elements",
+            "Practical guidelines for consistent use",
+          ],
+          outcome:
+            "A distinctive, flexible identity that is easy to recognise and straightforward to use as your business grows.",
         },
         {
+          slug: "print-design",
           title: "Print Design",
           description: "Posters, books, brochures and editorial layouts.",
+          intro:
+            "Thoughtful print design turns information into an object people want to hold on to, revisit and share.",
+          deliverables: [
+            "Concept and editorial hierarchy",
+            "Layouts for publications and campaigns",
+            "Print-ready artwork and production support",
+            "Paper, finish and format recommendations",
+          ],
+          outcome:
+            "Tangible communication that carries your identity with the same clarity and care as the rest of your brand.",
         },
         {
+          slug: "digital-content",
           title: "Social Media",
           description: "Campaign graphics and content for modern brands.",
+          intro:
+            "A consistent digital presence makes every campaign, post and launch feel like part of one recognisable story.",
+          deliverables: [
+            "Campaign concepts and key visuals",
+            "Social content systems and templates",
+            "Launch assets and digital touchpoints",
+            "A visual rhythm built for everyday use",
+          ],
+          outcome:
+            "A more confident, cohesive presence that helps your brand stand out without looking like everyone else.",
         },
       ],
     },
@@ -128,6 +180,18 @@ export const translations = {
       nextProject: "Következő munka",
       projectPagination: "Munkák navigációja",
       goToProject: "Ugrás a munkához",
+      detail: {
+        overview: "Áttekintés",
+        services: "Szolgáltatások",
+        colours: "Arculati színek",
+        challenge: "Kihívás",
+        solution: "Megoldás",
+        nextProject: "Következő munka",
+        viewImage: "Kép megnyitása",
+        closePreview: "Képelőnézet bezárása",
+        previousImage: "Előző kép",
+        nextImage: "Következő kép",
+      },
     },
 
     about: {
@@ -145,21 +209,61 @@ export const translations = {
     services: {
       eyebrow: "Szakterületek",
       title: "Amiben értéket adok",
+      page: {
+        deliverables: "A közös munka része",
+        outcome: "A végeredmény",
+        ctaTitle: "Van egy ötleted?",
+        ctaDescription: "Mesélj róla, és találjuk meg hozzá a legjobb vizuális irányt.",
+        cta: "Indítsunk egy beszélgetést",
+      },
       items: [
         {
+          slug: "brand-identity",
           title: "Arculat és márkaidentitás",
           description:
             "Logó, vizuális rendszer és használati irányelvek a márka saját karakterére szabva.",
+          intro:
+            "Egy világos arculat minden találkozási ponton felismerhetővé és következetessé teszi a márkádat.",
+          deliverables: [
+            "Márkairány és vizuális karakter",
+            "Logó és alapvető vizuális rendszer",
+            "Tipográfia, színek és kiegészítő elemek",
+            "Gyakorlati arculati útmutató a mindennapi használathoz",
+          ],
+          outcome:
+            "Egy egyedi, rugalmas arculat, amely könnyen felismerhető, és a vállalkozás növekedésével is jól működik.",
         },
         {
+          slug: "print-design",
           title: "Nyomtatott kommunikáció",
           description:
             "Kiadványok, csomagolások, plakátok és szerkesztett anyagok átgondolt vizuális rendszerben.",
+          intro:
+            "A jó nyomtatott anyag információt ad át, miközben olyan tárggyá válik, amit érdemes kézbe venni és megőrizni.",
+          deliverables: [
+            "Koncepció és szerkesztési hierarchia",
+            "Kiadványok és kampányanyagok tördelése",
+            "Nyomdakész anyagok és gyártási támogatás",
+            "Papír-, forma- és felületjavaslatok",
+          ],
+          outcome:
+            "Kézzelfogható kommunikáció, amely ugyanolyan tudatosan viszi tovább a márkádat, mint bármely más felület.",
         },
         {
+          slug: "digital-content",
           title: "Digitális megjelenés",
           description:
             "Kampányokhoz és közösségi felületekre tervezett következetes kreatív anyagok.",
+          intro:
+            "A következetes digitális jelenlét minden kampányt, posztot és új megjelenést egyetlen felismerhető történetté kapcsol össze.",
+          deliverables: [
+            "Kampánykoncepciók és key visualok",
+            "Social media rendszer és szerkeszthető sablonok",
+            "Launch anyagok és digitális érintkezési pontok",
+            "A mindennapi használatra kialakított vizuális ritmus",
+          ],
+          outcome:
+            "Magabiztosabb, egységesebb digitális jelenlét, amely segít kitűnni anélkül, hogy elveszítenéd a márka saját hangját.",
         },
       ],
     },

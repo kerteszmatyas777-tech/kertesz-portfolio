@@ -9,7 +9,7 @@ export default function About() {
   const t = translations[language];
 
   return (
-    <section id="about" className="max-w-7xl mx-auto px-6 lg:px-12 py-32">
+    <section id="about" className="max-w-7xl mx-auto px-6 pt-20 pb-20 lg:px-12 lg:pt-28 lg:pb-28">
 
       <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
         {t.about.eyebrow}
