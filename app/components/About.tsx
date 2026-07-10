@@ -48,7 +48,7 @@ export default function About() {
 
         <div>
           <Image
-            src="/images/image_kivágva.png"
+            src="/images/about-portrait.png"
             alt="Kertész Mátyás"
             width={600}
             height={700}
