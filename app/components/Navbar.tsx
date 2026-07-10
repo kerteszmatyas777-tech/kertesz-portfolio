@@ -99,9 +99,19 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-5xl font-light text-[var(--primary)] transition"
+            aria-label={open ? "Close menu" : "Open menu"}
+            className="relative h-10 w-10 md:hidden"
           >
-            {open ? "✕" : "☰"}
+            <span
+              className={`absolute left-1/2 top-1/2 h-px w-8 -translate-x-1/2 bg-[var(--primary)] transition ${
+                open ? "rotate-45" : "-translate-y-1.5"
+              }`}
+            />
+            <span
+              className={`absolute left-1/2 top-1/2 h-px w-8 -translate-x-1/2 bg-[var(--primary)] transition ${
+                open ? "-rotate-45" : "translate-y-1.5"
+              }`}
+            />
           </button>
 
         </div>
@@ -110,7 +120,7 @@ export default function Navbar() {
       {/* MOBILE MENU */}
 
       <div
-        className={`fixed inset-0 z-40 flex flex-col justify-between bg-[#F8F9FB] px-8 pt-32 pb-12 transition-all duration-500 ${
+        className={`fixed inset-0 z-40 flex flex-col justify-between overflow-x-hidden bg-[#F8F9FB] px-6 pt-32 pb-10 transition-all duration-500 ${
           open
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0 pointer-events-none"
@@ -118,12 +128,12 @@ export default function Navbar() {
       >
         {/* Links */}
 
-        <div className="space-y-8">
+        <div className="space-y-6">
 
           <a
             href="#work"
             onClick={() => setOpen(false)}
-            className="block text-6xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)]"
+            className="block max-w-full break-words text-[clamp(2.65rem,13vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.work}
           </a>
@@ -131,7 +141,7 @@ export default function Navbar() {
           <a
             href="#services"
             onClick={() => setOpen(false)}
-            className="block text-6xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)]"
+            className="block max-w-full break-words text-[clamp(2.65rem,13vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.services}
           </a>
@@ -139,7 +149,7 @@ export default function Navbar() {
           <a
             href="#about"
             onClick={() => setOpen(false)}
-            className="block text-6xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)]"
+            className="block max-w-full break-words text-[clamp(2.65rem,13vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.about}
           </a>
@@ -147,7 +157,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="block text-6xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)]"
+            className="block max-w-full break-words text-[clamp(2.65rem,13vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.contact}
           </a>

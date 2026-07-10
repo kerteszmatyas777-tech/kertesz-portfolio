@@ -23,13 +23,13 @@ export default function ProjectCard({
           {category}
         </p>
 
-        <div className="mt-4 flex items-start justify-between gap-4">
-          <h3 className="text-5xl font-bold leading-[0.9] tracking-[-0.05em] text-[var(--primary)]">
+        <div className="mt-4 flex flex-col gap-3">
+          <h3 className="max-w-full break-words text-[clamp(2.5rem,12vw,3.5rem)] font-bold leading-[0.92] tracking-[-0.04em] text-[var(--primary)]">
             {title}
           </h3>
 
-          <span className="mt-2 text-3xl text-[var(--primary)] transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
-            ↗
+          <span className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--primary)]/70 transition duration-300 group-hover:opacity-60">
+            View Project
           </span>
         </div>
 
@@ -72,8 +72,8 @@ export default function ProjectCard({
               {title}
             </h3>
 
-            <span className="text-3xl text-[var(--primary)] transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
-              ↗
+            <span className="pt-1 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]/70 transition duration-300 group-hover:opacity-60">
+              View Project
             </span>
 
           </div>

@@ -52,21 +52,21 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="transition hover:opacity-70"
             >
-              Instagram ↗
+              Instagram
             </a>
 
             <a
               href="#"
               className="transition hover:opacity-70"
             >
-              Behance ↗
+              Behance
             </a>
 
             <a
               href="#"
               className="transition hover:opacity-70"
             >
-              LinkedIn ↗
+              LinkedIn
             </a>
 
           </div>

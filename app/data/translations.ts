@@ -64,7 +64,7 @@ export const translations = {
 
     footer: {
       role: "Brand Identity & Graphic Designer",
-      backToTop: "Back to Top ↑",
+      backToTop: "Back to Top",
     },
   },
 
@@ -133,7 +133,7 @@ export const translations = {
 
     footer: {
       role: "Arculattervező grafikus",
-      backToTop: "Vissza az elejére ↑",
+      backToTop: "Vissza az elejére",
     },
   },
 };
