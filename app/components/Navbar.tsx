@@ -3,13 +3,21 @@
 import { useLanguage } from "@/app/context/LanguageContext";
 import { translations } from "@/app/data/translations";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
+  const router = useRouter();
   const t = translations[language];
+
+  const handleMobileLanguageChange = (nextLanguage: typeof language) => {
+    setLanguage(nextLanguage);
+    setOpen(false);
+    router.push("/");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -133,7 +141,7 @@ export default function Navbar() {
           <a
             href="#work"
             onClick={() => setOpen(false)}
-            className="block max-w-full break-words text-[clamp(2.65rem,13vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
+            className="block max-w-full whitespace-nowrap text-[clamp(2rem,10vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.work}
           </a>
@@ -141,7 +149,7 @@ export default function Navbar() {
           <a
             href="#services"
             onClick={() => setOpen(false)}
-            className="block max-w-full break-words text-[clamp(2.65rem,13vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
+            className="block max-w-full whitespace-nowrap text-[clamp(2rem,10vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.services}
           </a>
@@ -149,7 +157,7 @@ export default function Navbar() {
           <a
             href="#about"
             onClick={() => setOpen(false)}
-            className="block max-w-full break-words text-[clamp(2.65rem,13vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
+            className="block max-w-full whitespace-nowrap text-[clamp(2rem,10vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.about}
           </a>
@@ -157,7 +165,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="block max-w-full break-words text-[clamp(2.65rem,13vw,4rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
+            className="block max-w-full whitespace-nowrap text-[clamp(2rem,10vw,3.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]"
           >
             {t.nav.contact}
           </a>
@@ -172,14 +180,14 @@ export default function Navbar() {
 
             <div className="flex gap-6 text-lg font-semibold text-[var(--primary)]">
               <button
-                onClick={() => setLanguage("en")}
+                onClick={() => handleMobileLanguageChange("en")}
                 className={language === "en" ? "" : "opacity-40"}
               >
                 EN
               </button>
 
               <button
-                onClick={() => setLanguage("hu")}
+                onClick={() => handleMobileLanguageChange("hu")}
                 className={language === "hu" ? "" : "opacity-40"}
               >
                 HU

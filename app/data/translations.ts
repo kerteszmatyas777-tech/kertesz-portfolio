@@ -22,6 +22,11 @@ export const translations = {
     projects: {
       eyebrow: "Portfolio",
       title: "Selected Work",
+      swipe: "Swipe to explore",
+      previousProject: "Previous project",
+      nextProject: "Next project",
+      projectPagination: "Project navigation",
+      goToProject: "Go to project",
     },
 
     about: {
@@ -60,6 +65,33 @@ export const translations = {
       title: "Let\u0027s create something memorable.",
       titleLines: ["Let\u0027s create", "something memorable."],
       description: "Have a project in mind? I\u0027d love to hear about it.",
+      form: {
+        title: "Tell me about your project",
+        nameLabel: "Your name",
+        emailLabel: "Email address",
+        serviceLabel: "What do you need help with?",
+        budgetLabel: "Estimated budget",
+        messageLabel: "A few words about the project",
+        messagePlaceholder: "What are you building, and where would you like to get to?",
+        selectPlaceholder: "Please select",
+        submit: "Start a conversation",
+        sending: "Sending…",
+        success: "Thank you — your message has been sent.",
+        error: "Something went wrong. Please try again or email me directly.",
+        mailSubject: "New project enquiry",
+        services: [
+          "Brand identity",
+          "Print design",
+          "Digital content",
+          "I need guidance",
+        ],
+        budgets: [
+          "€250–€500",
+          "€500–€750",
+          "€750–€1,000",
+          "€1,000–€1,250",
+        ],
+      },
     },
 
     footer: {
@@ -77,63 +109,99 @@ export const translations = {
     },
 
     hero: {
-      eyebrow: "Brand- és arculattervező",
-      title: "Márkákat tervezek, amelyek nyomot hagynak.",
-      mobileTitle: ["Márkákat", "tervezek,", "amelyek", "nyomot hagynak."],
+      eyebrow: "Arculattervező és grafikus",
+      title: "Márkákat formálok, amelyek megmaradnak.",
+      mobileTitle: ["Márkákat", "formálok,", "amelyek", "megmaradnak."],
       description:
-        "Stratégiai arculattervezéssel és vizuális kommunikációval segítek olyan vállalkozásoknak, amelyek szeretnének kitűnni, bizalmat építeni és maradandó benyomást kelteni.",
+        "Arculatot és vizuális rendszereket tervezek vendéglátóhelyeknek, szolgáltatóknak és növekedésre kész márkáknak — hogy felismerhetőek, következetesek és emlékezetesek legyenek.",
       mobileDescription:
-        "Stratégiai arculattervezéssel és vizuális kommunikációval segítek olyan vállalkozásoknak, amelyek szeretnének kitűnni, bizalmat építeni és maradandó benyomást kelteni.",
-      projects: "Projektjeim",
-      contact: "Kapcsolat",
+        "Tudatos márkaépítés és erős vizuális arculat ambiciózus vállalkozásoknak.",
+      projects: "Munkáim",
+      contact: "Beszéljünk",
     },
 
     projects: {
-      eyebrow: "Portfólió",
-      title: "Válogatott munkák",
+      eyebrow: "Munkák",
+      title: "Kiemelt munkák",
+      swipe: "Húzd oldalra a további munkákért",
+      previousProject: "Előző munka",
+      nextProject: "Következő munka",
+      projectPagination: "Munkák navigációja",
+      goToProject: "Ugrás a munkához",
     },
 
     about: {
-      eyebrow: "Rólam",
+      eyebrow: "Bemutatkozás",
       title: "Szia, Mátyás vagyok.",
       description:
-        "Magyarországi grafikusként arculattervezésre, nyomdai tervezésre és vizuális kommunikációra specializálódtam. Letisztult, időtálló megoldásokat készítek, amelyek segítik a vállalkozások növekedését.",
+        "Grafikusként olyan arculatokat és nyomtatott anyagokat tervezek, amelyek egyértelmű karaktert adnak egy vállalkozásnak. A stratégiai gondolkodást letisztult, időtálló vizuális megoldásokkal kapcsolom össze.",
       stats: {
-        projects: "Projekt",
-        years: "Év",
-        custom: "Egyedi",
+        projects: "projekt",
+        years: "év tapasztalat",
+        custom: "egyedi",
       },
     },
 
     services: {
-      eyebrow: "Szolgáltatások",
-      title: "Amiben segíteni tudok",
+      eyebrow: "Szakterületek",
+      title: "Amiben értéket adok",
       items: [
         {
-          title: "Arculattervezés",
-          description: "Logók, vizuális rendszerek és arculati útmutatók.",
+          title: "Arculat és márkaidentitás",
+          description:
+            "Logó, vizuális rendszer és használati irányelvek a márka saját karakterére szabva.",
         },
         {
-          title: "Nyomdai tervezés",
-          description: "Plakátok, könyvek, brosúrák és kiadványtervek.",
+          title: "Nyomtatott kommunikáció",
+          description:
+            "Kiadványok, csomagolások, plakátok és szerkesztett anyagok átgondolt vizuális rendszerben.",
         },
         {
-          title: "Social media",
-          description: "Kampánygrafikák és tartalmak modern márkáknak.",
+          title: "Digitális megjelenés",
+          description:
+            "Kampányokhoz és közösségi felületekre tervezett következetes kreatív anyagok.",
         },
       ],
     },
 
     contact: {
       eyebrow: "Kapcsolat",
-      title: "Alkossunk valami emlékezeteset.",
-      titleLines: ["Alkossunk valami", "emlékezeteset."],
-      description: "Van egy projekted? Szívesen meghallgatom.",
+      title: "Alkossunk maradandót.",
+      titleLines: ["Alkossunk", "maradandót."],
+      description:
+        "Van egy márkaötleted vagy új feladatod? Írj, és nézzük meg, merre indulhatunk.",
+      form: {
+        title: "Mesélj a projektedről",
+        nameLabel: "Neved",
+        emailLabel: "E-mail-cím",
+        serviceLabel: "Miben kérsz segítséget?",
+        budgetLabel: "Tervezett költségkeret",
+        messageLabel: "Néhány szó a projektről",
+        messagePlaceholder: "Min dolgozol, és hová szeretnél eljutni vele?",
+        selectPlaceholder: "Válassz egy lehetőséget",
+        submit: "Indítsunk egy beszélgetést",
+        sending: "Küldés…",
+        success: "Köszönöm — az üzeneted megérkezett.",
+        error: "Valami nem sikerült. Próbáld újra, vagy írj közvetlenül e-mailt.",
+        mailSubject: "Új projektmegkeresés",
+        services: [
+          "Arculat és márkaidentitás",
+          "Nyomtatott kommunikáció",
+          "Digitális megjelenés",
+          "Még keresem az irányt",
+        ],
+        budgets: [
+          "100 000–200 000 Ft",
+          "200 000–300 000 Ft",
+          "300 000–400 000 Ft",
+          "400 000–500 000 Ft",
+        ],
+      },
     },
 
     footer: {
-      role: "Arculattervező grafikus",
-      backToTop: "Vissza az elejére",
+      role: "Arculattervező és grafikus",
+      backToTop: "Vissza a tetejére",
     },
   },
 };

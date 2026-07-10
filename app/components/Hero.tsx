@@ -9,6 +9,9 @@ import { translations } from "@/app/data/translations";
 export default function Hero() {
   const { language } = useLanguage();
   const t = translations[language];
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
   const mobileTitleClass =
     language === "hu"
       ? "mt-7 max-w-full text-[clamp(3.05rem,12.8vw,3.8rem)] font-bold leading-[0.88] tracking-[-0.045em] text-[var(--primary)]"
@@ -20,12 +23,12 @@ export default function Hero() {
 
       {/* ================= MOBILE ================= */}
 
-      <div className="relative z-10 flex min-h-[100svh] flex-col px-6 pt-28 pb-8 lg:hidden">
+      <div className="relative z-10 flex min-h-[100svh] flex-col px-6 pt-28 lg:hidden">
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-[20rem] text-[0.72rem] uppercase leading-5 tracking-[0.28em] text-[var(--primary)]/70"
+          className="max-w-[20rem] text-sm font-semibold uppercase leading-5 tracking-[0.22em] text-[var(--primary)]/70"
         >
           {t.hero.eyebrow}
         </motion.p>
@@ -58,7 +61,11 @@ export default function Hero() {
             {t.hero.projects}
           </button>
 
-          <button className="rounded-full border border-[var(--primary)] px-9 py-4 text-[1.05rem] font-semibold text-[var(--primary)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]">
+          <button
+            type="button"
+            onClick={scrollToContact}
+            className="rounded-full border border-[var(--primary)] px-9 py-4 text-[1.05rem] font-semibold text-[var(--primary)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]"
+          >
             {t.hero.contact}
           </button>
 
@@ -68,17 +75,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="mt-11 flex justify-end pr-2"
+          className="-mx-6 mt-auto flex w-[calc(100%+3rem)] justify-center pt-8"
         >
-          <div className="relative h-[min(19.5rem,80vw)] w-[min(18rem,76vw)] overflow-hidden rounded-[32px] shadow-2xl">
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
 
             <Image
               src="/images/profile2.png"
               alt="Kertész Mátyás"
               fill
               priority
-              sizes="76vw"
-              className="object-cover"
+              sizes="100vw"
+              className="object-cover object-[center_40%]"
             />
 
           </div>
@@ -114,7 +121,11 @@ export default function Hero() {
               {t.hero.projects}
             </button>
 
-            <button className="rounded-full border border-[var(--primary)] px-10 py-5 text-lg font-semibold text-[var(--primary)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]">
+            <button
+              type="button"
+              onClick={scrollToContact}
+              className="rounded-full border border-[var(--primary)] px-10 py-5 text-lg font-semibold text-[var(--primary)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]"
+            >
               {t.hero.contact}
             </button>
 

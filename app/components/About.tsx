@@ -11,14 +11,14 @@ export default function About() {
   return (
     <section id="about" className="max-w-7xl mx-auto px-6 lg:px-12 py-32">
 
-      <p className="uppercase tracking-[0.3em] text-sm text-slate-500">
+      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
         {t.about.eyebrow}
       </p>
 
       <div className="grid lg:grid-cols-2 gap-20 items-center mt-12">
 
         <div>
-          <h2 className="text-5xl font-bold text-[var(--primary)] leading-tight">
+          <h2 className="text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)] md:text-6xl">
             {t.about.title}
           </h2>
 

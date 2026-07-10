@@ -18,27 +18,31 @@ export default function ProjectCard({
 }: Props) {
   if (mobile) {
     return (
-      <Link href={`/projects/${slug}`} className="group block">
-        <p className="text-xs uppercase tracking-[0.35em] text-slate-500">
+      <Link
+        href={`/projects/${slug}`}
+        data-project-slide
+        className="group block w-[80vw] max-w-none shrink-0 snap-center"
+      >
+        <p className="text-[0.65rem] uppercase tracking-[0.28em] text-slate-500">
           {category}
         </p>
 
-        <div className="mt-4 flex flex-col gap-3">
-          <h3 className="max-w-full break-words text-[clamp(2.5rem,12vw,3.5rem)] font-bold leading-[0.92] tracking-[-0.04em] text-[var(--primary)]">
+        <div className="mt-3 flex flex-col gap-2">
+          <h3 className="max-w-full text-balance break-normal text-[clamp(1.65rem,7vw,2.25rem)] font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)]">
             {title}
           </h3>
 
-          <span className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--primary)]/70 transition duration-300 group-hover:opacity-60">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--primary)]/70 transition duration-300 group-hover:opacity-60">
             View Project
           </span>
         </div>
 
-        <div className="relative mt-8 aspect-[4/5] overflow-hidden rounded-[32px]">
+        <div className="relative mt-5 aspect-[4/3] overflow-hidden rounded-[24px]">
           <Image
             src={image}
             alt={title}
             fill
-            sizes="100vw"
+            sizes="(max-width: 1024px) 80vw, 600px"
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </div>
