@@ -77,14 +77,14 @@ export const translations = {
     },
 
     hero: {
-      eyebrow: "Arculattervező grafikus",
-      title: "Emlékezetes márkákat tervezek.",
-      mobileTitle: ["Emlékezetes", "márkákat", "tervezek."],
+      eyebrow: "Brand- és arculattervező",
+      title: "Márkákat tervezek, amelyek nyomot hagynak.",
+      mobileTitle: ["Márkákat", "tervezek,", "amelyek", "nyomot hagynak."],
       description:
-        "Stratégiai arculatokat, nyomdai anyagokat és vizuális kommunikációt tervezek kávézóknak, éttermeknek, edzőtermeknek és ambiciózus vállalkozásoknak.",
+        "Stratégiai arculattervezéssel és vizuális kommunikációval segítek olyan vállalkozásoknak, amelyek szeretnének kitűnni, bizalmat építeni és maradandó benyomást kelteni.",
       mobileDescription:
-        "Stratégiai arculattervezés és vizuális identitás ambiciózus vállalkozásoknak.",
-      projects: "Projektek",
+        "Stratégiai arculattervezéssel és vizuális kommunikációval segítek olyan vállalkozásoknak, amelyek szeretnének kitűnni, bizalmat építeni és maradandó benyomást kelteni.",
+      projects: "Projektjeim",
       contact: "Kapcsolat",
     },
 
