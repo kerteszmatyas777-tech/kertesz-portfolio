@@ -54,7 +54,7 @@ export default function ProjectCard({
 
   return (
     <Link href={`/projects/${slug}`} className="group block">
-      <div className="overflow-hidden rounded-[32px] bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+      <div className="overflow-hidden rounded-[32px] bg-white shadow-[0_12px_30px_rgba(17,59,142,0.1)] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
         <div className="relative aspect-[16/10] overflow-hidden">
           <Image

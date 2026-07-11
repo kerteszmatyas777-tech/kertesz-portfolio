@@ -82,7 +82,7 @@ export default function ServicePageContent({ slug }: Props) {
             </p>
             <Link
               href="/#project-brief"
-              className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-semibold text-[var(--primary)] transition hover:-translate-y-0.5 hover:shadow-xl"
+              className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-semibold text-[var(--primary)] transition hover:-translate-y-0.5 hover:shadow-2xl"
             >
               {t.services.page.cta}
             </Link>

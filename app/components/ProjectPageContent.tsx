@@ -36,15 +36,15 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
   return (
     <main className="min-h-screen bg-[#F8F9FB]">
       <section className="mx-auto max-w-[1600px] px-6 pb-0 pt-32 sm:px-8 lg:px-24 lg:pt-44">
-        <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
           {projectTranslations.categories[project.categoryKey]}
         </p>
 
-        <h1 className="mt-6 break-words text-5xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)] md:text-7xl xl:text-8xl">
+        <h1 className="mt-6 max-w-5xl break-words text-5xl font-bold leading-[0.9] tracking-[-0.06em] text-[var(--primary)] md:text-7xl xl:text-8xl">
           {project.title}
         </h1>
 
-        <div className="relative mt-12 aspect-[16/9] overflow-hidden rounded-[28px] shadow-2xl sm:mt-20 sm:rounded-[42px]">
+        <div className="relative mt-12 aspect-[16/9] overflow-hidden rounded-[28px] shadow-[0_28px_65px_rgba(17,59,142,0.2)] sm:mt-16 sm:rounded-[42px]">
           <Image
             src={project.image}
             alt={`${project.title} project cover`}
@@ -56,37 +56,58 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1200px] px-6 py-20 sm:px-8 lg:px-0 lg:py-32">
+      <section className="mx-auto max-w-[1240px] px-6 py-24 sm:px-8 lg:px-0 lg:py-36">
         {hasDetails && (
           <>
             {overview && (
               <DetailSection label={labels.overview}>
-                <p className="text-xl leading-10 text-slate-600">{overview}</p>
+                <p className="max-w-4xl text-[clamp(2rem,3.35vw,3.35rem)] leading-[1.12] tracking-[-0.035em] text-[var(--primary)]">
+                  {overview}
+                </p>
+              </DetailSection>
+            )}
+
+            {challenge && (
+              <DetailSection label={labels.challenge} className="mt-24 border-t border-[var(--primary)]/10 pt-10 lg:mt-36 lg:pt-14">
+                <p className="max-w-3xl text-xl leading-9 text-slate-600 md:text-2xl md:leading-10">
+                  {challenge}
+                </p>
+              </DetailSection>
+            )}
+
+            {solution && (
+              <DetailSection label={labels.solution} className="mt-20 lg:mt-28">
+                <p className="max-w-3xl text-xl leading-9 text-slate-600 md:text-2xl md:leading-10">
+                  {solution}
+                </p>
               </DetailSection>
             )}
 
             {services.length > 0 && (
-              <DetailSection label={labels.services} className="mt-20 lg:mt-28">
-                <div className="flex flex-wrap gap-3 sm:gap-4">
-                  {services.map((service) => (
-                    <span
+              <DetailSection label={labels.services} className="mt-24 lg:mt-36">
+                <div className="grid overflow-hidden rounded-[28px] border border-[var(--primary)]/10 bg-white sm:grid-cols-2">
+                  {services.map((service, index) => (
+                    <div
                       key={service}
-                      className="rounded-full bg-white px-5 py-3 font-medium text-[var(--primary)] shadow-sm"
+                      className="flex items-start gap-5 border-b border-[var(--primary)]/10 px-5 py-6 last:border-b-0 sm:px-7 sm:py-8"
                     >
-                      {service}
-                    </span>
+                      <span className="pt-0.5 text-xs font-semibold tracking-[0.14em] text-[var(--primary)]/45">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <p className="text-lg font-medium leading-7 text-[var(--primary)]">{service}</p>
+                    </div>
                   ))}
                 </div>
               </DetailSection>
             )}
 
             {project.colors.length > 0 && (
-              <DetailSection label={labels.colours} className="mt-20 lg:mt-28">
+              <DetailSection label={labels.colours} className="mt-24 lg:mt-36">
                 <div className="grid grid-cols-2 gap-5 sm:gap-8 md:grid-cols-4">
                   {project.colors.map((color) => (
                     <div key={color}>
                       <div
-                        className="aspect-square rounded-[22px] shadow-md sm:rounded-[28px]"
+                        className="aspect-square rounded-[22px] shadow-lg sm:rounded-[28px]"
                         style={{ backgroundColor: color }}
                       />
                       <p className="mt-4 text-center font-medium text-slate-500">{color}</p>
@@ -96,20 +117,8 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
               </DetailSection>
             )}
 
-            {challenge && (
-              <DetailSection label={labels.challenge} className="mt-20 lg:mt-32">
-                <p className="text-xl leading-10 text-slate-600">{challenge}</p>
-              </DetailSection>
-            )}
-
-            {solution && (
-              <DetailSection label={labels.solution} className="mt-20 lg:mt-28">
-                <p className="text-xl leading-10 text-slate-600">{solution}</p>
-              </DetailSection>
-            )}
-
             {project.gallery.length > 0 && (
-              <div className="mt-24 lg:mt-40">
+              <div className="mt-28 lg:mt-40">
                 <ProjectGallery
                   images={project.gallery}
                   projectTitle={project.title}
@@ -136,8 +145,8 @@ function DetailSection({
   children: React.ReactNode;
 }) {
   return (
-    <div className={`grid gap-8 lg:grid-cols-[220px_1fr] lg:gap-16 ${className}`}>
-      <p className="text-xs uppercase tracking-[0.3em] text-slate-400">{label}</p>
+    <div className={`grid gap-7 lg:grid-cols-[220px_1fr] lg:gap-16 ${className}`}>
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">{label}</p>
       {children}
     </div>
   );

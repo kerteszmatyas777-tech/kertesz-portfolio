@@ -83,7 +83,7 @@ export default function Hero() {
           <button
             type="button"
             onClick={scrollToProjectBrief}
-            className="rounded-full border border-[var(--primary)] px-11 py-4 text-[1.35rem] font-semibold text-[var(--primary)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]"
+            className="rounded-full border border-[var(--primary)]/20 bg-white px-11 py-4 text-[1.35rem] font-semibold text-[var(--primary)] shadow-[0_8px_20px_rgba(17,59,142,0.12)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]"
           >
             {t.hero.contact}
           </button>
@@ -96,7 +96,7 @@ export default function Hero() {
           transition={{ delay: 0.5 }}
           className="-mx-6 mt-auto flex w-[calc(100%+3rem)] justify-center pt-8"
         >
-          <div className="relative aspect-[4/3] w-full overflow-hidden">
+          <div className="relative aspect-[4/3] w-full overflow-hidden shadow-[0_18px_42px_rgba(17,59,142,0.18)]">
 
             <Image
               src="/images/profile2.png"
@@ -152,7 +152,7 @@ export default function Hero() {
             <button
               type="button"
               onClick={scrollToProjectBrief}
-              className="rounded-full border border-[var(--primary)] px-10 py-5 text-lg font-semibold text-[var(--primary)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]"
+              className="rounded-full border border-[var(--primary)]/20 bg-white px-10 py-5 text-lg font-semibold text-[var(--primary)] shadow-[0_8px_20px_rgba(17,59,142,0.12)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[var(--primary)] hover:text-white hover:shadow-2xl active:scale-[0.98]"
             >
               {t.hero.contact}
             </button>
@@ -167,7 +167,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="flex justify-end"
         >
-          <div className="relative h-[min(650px,68vh)] w-full max-w-[600px] overflow-hidden rounded-[40px] shadow-2xl">
+          <div className="relative h-[min(650px,68vh)] w-full max-w-[600px] overflow-hidden rounded-[40px] shadow-[0_28px_65px_rgba(17,59,142,0.2)]">
 
             <Image
               src="/images/profile2.png"

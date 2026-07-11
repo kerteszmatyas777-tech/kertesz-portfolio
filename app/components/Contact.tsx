@@ -92,7 +92,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-lg"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-xl"
               >
                 <svg
                   aria-hidden="true"
@@ -113,7 +113,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-lg"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-xl"
               >
                 <svg
                   aria-hidden="true"
@@ -130,7 +130,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-lg"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--primary)]/20 text-[var(--primary)] transition hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white hover:shadow-xl"
               >
                 <svg
                   aria-hidden="true"
@@ -288,7 +288,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="mx-auto mt-10 block w-fit rounded-full bg-[var(--primary)] px-7 py-3 text-xl font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 disabled:cursor-wait disabled:opacity-70 lg:w-full lg:px-8 lg:py-4 lg:text-base"
+              className="mx-auto mt-10 block w-fit rounded-full bg-[var(--primary)] px-7 py-3 text-xl font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl active:translate-y-0 disabled:cursor-wait disabled:opacity-70 lg:w-full lg:px-8 lg:py-4 lg:text-base"
             >
               {status === "sending" ? t.contact.form.sending : t.contact.form.submit}
             </button>
