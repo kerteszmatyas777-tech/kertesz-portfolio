@@ -12,6 +12,8 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [service, setService] = useState("");
   const [budget, setBudget] = useState("");
+  const [referral, setReferral] = useState("");
+  const [deadline, setDeadline] = useState("");
   const [message, setMessage] = useState("");
   const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
@@ -26,7 +28,7 @@ export default function Contact() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, service, budget, message, website }),
+        body: JSON.stringify({ name, email, service, budget, referral, deadline, message, website }),
       });
 
       if (!response.ok) throw new Error("Unable to send contact form.");
@@ -35,6 +37,8 @@ export default function Contact() {
       setEmail("");
       setService("");
       setBudget("");
+      setReferral("");
+      setDeadline("");
       setMessage("");
       setWebsite("");
       setStatus("success");
@@ -223,6 +227,42 @@ export default function Contact() {
                     {t.contact.form.selectPlaceholder}
                   </option>
                   {t.contact.form.budgets.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="block">
+                <span className="text-[0.95rem] font-semibold uppercase tracking-[0.12em] text-slate-500 lg:text-xs lg:tracking-[0.18em]">
+                  {t.contact.form.deadlineLabel}
+                </span>
+                <select
+                  value={deadline}
+                  onChange={(event) => setDeadline(event.target.value)}
+                  className="mt-3 w-full appearance-none border-b border-[var(--primary)]/20 bg-transparent py-3 text-lg text-[var(--primary)] outline-none transition focus:border-[var(--primary)] lg:text-base"
+                >
+                  <option value="">{t.contact.form.selectPlaceholder}</option>
+                  {t.contact.form.deadlines.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="block">
+                <span className="text-[0.95rem] font-semibold uppercase tracking-[0.12em] text-slate-500 lg:text-xs lg:tracking-[0.18em]">
+                  {t.contact.form.referralLabel}
+                </span>
+                <select
+                  value={referral}
+                  onChange={(event) => setReferral(event.target.value)}
+                  className="mt-3 w-full appearance-none border-b border-[var(--primary)]/20 bg-transparent py-3 text-lg text-[var(--primary)] outline-none transition focus:border-[var(--primary)] lg:text-base"
+                >
+                  <option value="">{t.contact.form.selectPlaceholder}</option>
+                  {t.contact.form.referrals.map((option) => (
                     <option key={option} value={option}>
                       {option}
                     </option>

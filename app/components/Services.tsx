@@ -33,7 +33,11 @@ export default function Services() {
               href={`/services/${service.slug}`}
               className="group block"
             >
-            <article className="relative min-h-[13.5rem] overflow-hidden rounded-[24px] border border-[var(--primary)]/10 bg-white p-5 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-[var(--primary)]/25 group-hover:shadow-2xl md:min-h-[20rem] md:rounded-[28px] md:p-10">
+            <article
+              className={`relative min-h-[11.5rem] overflow-hidden rounded-[22px] border border-[var(--primary)]/10 bg-white p-4 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-[var(--primary)]/25 group-hover:shadow-2xl md:min-h-[20rem] md:rounded-[28px] md:p-10 ${
+                language === "en" ? "min-h-[8.75rem]" : ""
+              }`}
+            >
               <div
                 aria-hidden="true"
                 className="absolute -right-24 -top-24 h-56 w-56 transition-transform duration-700 group-hover:scale-125"
@@ -47,15 +51,27 @@ export default function Services() {
               </div>
 
               <div className="relative flex h-full flex-col">
-                <h3 className="mt-3 max-w-full break-words text-[1.55rem] font-bold leading-[0.98] tracking-[-0.04em] text-[var(--primary)] transition-transform duration-500 group-hover:translate-x-1 md:mt-8 md:text-[2rem]">
-                  {service.title}
+                <h3 className="mt-2 max-w-full break-words text-[1.4rem] font-bold leading-[0.98] tracking-[-0.04em] text-[var(--primary)] transition-transform duration-500 group-hover:translate-x-1 md:mt-8 md:text-[2rem]">
+                  {language === "hu" && index === 0 ? (
+                    <>
+                      Arculat és
+                      <br className="md:hidden" /> márkaidentitás
+                    </>
+                  ) : language === "hu" && index === 2 ? (
+                    <>
+                      Digitális
+                      <br className="md:hidden" /> megjelenés
+                    </>
+                  ) : (
+                    service.title
+                  )}
                 </h3>
 
-                <p className="mt-3 max-w-xs break-words text-sm leading-5 text-slate-600 md:mt-5 md:text-base md:leading-7">
+                <p className="mt-2 max-w-xs break-words text-xs leading-5 text-slate-600 md:mt-5 md:text-base md:leading-7">
                   {service.description}
                 </p>
 
-                <div className="mt-auto pt-5 md:pt-10">
+                <div className="mt-auto pt-3 md:pt-10">
                   <div className="h-px w-12 bg-[var(--primary)]/25 transition-all duration-500 group-hover:w-20 group-hover:bg-[var(--primary)]" />
                 </div>
               </div>

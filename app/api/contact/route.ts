@@ -3,6 +3,8 @@ type ContactPayload = {
   email?: unknown;
   service?: unknown;
   budget?: unknown;
+  referral?: unknown;
+  deadline?: unknown;
   message?: unknown;
   website?: unknown;
 };
@@ -76,6 +78,8 @@ export async function POST(request: Request) {
   const email = getValue(payload.email);
   const service = getValue(payload.service);
   const budget = getValue(payload.budget);
+  const referral = getValue(payload.referral);
+  const deadline = getValue(payload.deadline);
   const message = getValue(payload.message);
   const website = getValue(payload.website);
 
@@ -90,7 +94,7 @@ export async function POST(request: Request) {
     !budget ||
     !message ||
     !/^\S+@\S+\.\S+$/.test(email) ||
-    [name, email, service, budget, message].some(
+    [name, email, service, budget, referral, deadline, message].some(
       (value) => value.length > MAX_FIELD_LENGTH
     )
   ) {
@@ -109,6 +113,8 @@ export async function POST(request: Request) {
     `Email: ${email}`,
     `Service: ${service}`,
     `Budget: ${budget}`,
+    `How they found you: ${referral || "Not provided"}`,
+    `Estimated deadline: ${deadline || "Not provided"}`,
     "",
     "Project details:",
     message,
@@ -119,6 +125,8 @@ export async function POST(request: Request) {
     <p><strong>Email:</strong> ${escapeHtml(email)}</p>
     <p><strong>Service:</strong> ${escapeHtml(service)}</p>
     <p><strong>Budget:</strong> ${escapeHtml(budget)}</p>
+    <p><strong>How they found you:</strong> ${escapeHtml(referral || "Not provided")}</p>
+    <p><strong>Estimated deadline:</strong> ${escapeHtml(deadline || "Not provided")}</p>
     <p><strong>Project details:</strong><br />${escapeHtml(message).replace(/\n/g, "<br />")}</p>
   `;
 

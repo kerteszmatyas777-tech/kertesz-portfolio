@@ -18,10 +18,10 @@ export default function FadeIn({
       className={className}
       initial={shouldReduceMotion ? false : { opacity: 0, y: 36 }}
       whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1, margin: "0px 0px -2% 0px" }}
+      viewport={{ once: true, amount: 0.01, margin: "0px 0px 12% 0px" }}
       transition={{
         delay,
-        duration: 0.58,
+        duration: 0.4,
         ease: [0.16, 1, 0.3, 1],
       }}
     >

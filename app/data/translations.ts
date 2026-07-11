@@ -118,7 +118,8 @@ export const translations = {
         {
           slug: "brand-identity",
           title: "Brand Identity",
-          description: "Logos, visual identity systems and brand guidelines.",
+          description:
+            "Logos, visual identity systems and clear brand guidelines that make your business recognisable at every touchpoint.",
           intro:
             "A clear identity gives your business a recognisable point of view — across every place people meet your brand.",
           deliverables: [
@@ -133,7 +134,8 @@ export const translations = {
         {
           slug: "print-design",
           title: "Print Design",
-          description: "Posters, books, brochures and editorial layouts.",
+          description:
+            "Posters, books, brochures and editorial layouts designed to make content clear, engaging and worth keeping.",
           intro:
             "Thoughtful print design turns information into an object people want to hold on to, revisit and share.",
           deliverables: [
@@ -148,7 +150,8 @@ export const translations = {
         {
           slug: "digital-content",
           title: "Social Media",
-          description: "Campaign graphics and content for modern brands.",
+          description:
+            "Campaign graphics and flexible social content that keep your brand consistent across every digital touchpoint.",
           intro:
             "A consistent digital presence makes every campaign, post and launch feel like part of one recognisable story.",
           deliverables: [
@@ -174,6 +177,8 @@ export const translations = {
         emailLabel: "Email address",
         serviceLabel: "What do you need help with?",
         budgetLabel: "Estimated budget",
+        deadlineLabel: "Estimated deadline",
+        referralLabel: "How did you hear about me?",
         messageLabel: "A few words about the project",
         messagePlaceholder: "What are you building, and where would you like to get to?",
         selectPlaceholder: "Please select",
@@ -187,6 +192,14 @@ export const translations = {
           "Print design",
           "Digital content",
           "I need guidance",
+        ],
+        referrals: ["Instagram", "Facebook", "LinkedIn", "Word of mouth", "Other"],
+        deadlines: [
+          "Within 1 month",
+          "1–2 months",
+          "2–3 months",
+          "More than 3 months",
+          "I’m flexible",
         ],
         budgets: [
           "€250–€500",
@@ -323,7 +336,7 @@ export const translations = {
           slug: "brand-identity",
           title: "Arculat és márkaidentitás",
           description:
-            "Logó, vizuális rendszer és használati irányelvek a márka saját karakterére szabva.",
+            "Logó, vizuális rendszer és használati irányelvek, amelyek minden felületen felismerhetővé teszik a márka saját karakterét.",
           intro:
             "Egy világos arculat minden találkozási ponton felismerhetővé és következetessé teszi a márkádat.",
           deliverables: [
@@ -339,7 +352,7 @@ export const translations = {
           slug: "print-design",
           title: "Nyomtatott kommunikáció",
           description:
-            "Kiadványok, csomagolások, plakátok és szerkesztett anyagok átgondolt vizuális rendszerben.",
+            "Kiadványok, csomagolások, plakátok és szerkesztett anyagok átgondolt vizuális rendszerben, a részletekre is figyelve.",
           intro:
             "A jó nyomtatott anyag információt ad át, miközben olyan tárggyá válik, amit érdemes kézbe venni és megőrizni.",
           deliverables: [
@@ -355,7 +368,7 @@ export const translations = {
           slug: "digital-content",
           title: "Digitális megjelenés",
           description:
-            "Kampányokhoz és közösségi felületekre tervezett következetes kreatív anyagok.",
+            "Kampányokhoz és közösségi felületekre tervezett következetes kreatív anyagok, amelyek erősítik a márka online jelenlétét.",
           intro:
             "A következetes digitális jelenlét minden kampányt, posztot és új megjelenést egyetlen felismerhető történetté kapcsol össze.",
           deliverables: [
@@ -382,6 +395,8 @@ export const translations = {
         emailLabel: "E-mail-cím",
         serviceLabel: "Miben kérsz segítséget?",
         budgetLabel: "Tervezett költségkeret",
+        deadlineLabel: "Tervezett határidő",
+        referralLabel: "Honnan hallottál rólam?",
         messageLabel: "Néhány szó a projektről",
         messagePlaceholder: "Min dolgozol, és hová szeretnél eljutni vele?",
         selectPlaceholder: "Válassz egy lehetőséget",
@@ -395,6 +410,14 @@ export const translations = {
           "Nyomtatott kommunikáció",
           "Digitális megjelenés",
           "Még keresem az irányt",
+        ],
+        referrals: ["Instagram", "Facebook", "LinkedIn", "Ajánlás útján", "Egyéb"],
+        deadlines: [
+          "1 hónapon belül",
+          "1–2 hónap",
+          "2–3 hónap",
+          "3 hónapnál több",
+          "Rugalmas vagyok",
         ],
         budgets: [
           "100 000–200 000 Ft",
