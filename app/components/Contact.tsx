@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
+import FadeIn from "./FadeIn";
 
 export default function Contact() {
   const { language } = useLanguage();
@@ -45,12 +46,14 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-white pt-20 pb-28 lg:pt-28 lg:pb-40">
       <div className="mx-auto max-w-[1500px] px-6 lg:px-20">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
-          {t.contact.eyebrow}
-        </p>
+        <FadeIn>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+            {t.contact.eyebrow}
+          </p>
+        </FadeIn>
 
         <div className="mt-6 grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-          <div className="min-w-0 flex flex-col justify-between">
+          <FadeIn className="min-w-0 flex flex-col justify-between" delay={0.08}>
             <div>
               <h2 className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)] md:text-7xl">
                 {t.contact.titleLines.map((line) => (
@@ -61,7 +64,14 @@ export default function Contact() {
               </h2>
 
               <p className="mt-16 max-w-md text-lg leading-8 text-slate-600 lg:mt-24">
-                {t.contact.description}
+                {language === "hu" ? (
+                  <>
+                    Van egy márkaötleted vagy új feladatod? Írj, és nézzük meg,
+                    <br className="lg:hidden" /> merre indulhatunk.
+                  </>
+                ) : (
+                  t.contact.description
+                )}
               </p>
 
               <a
@@ -128,9 +138,10 @@ export default function Contact() {
                 </svg>
               </a>
             </div>
-          </div>
+          </FadeIn>
 
-          <form
+          <FadeIn delay={0.16}>
+            <form
             id="project-brief"
             onSubmit={handleSubmit}
             className="min-w-0 scroll-mt-28 rounded-[32px] border border-[var(--primary)]/10 bg-[#F8F9FB] p-6 sm:p-8 lg:p-10"
@@ -253,7 +264,8 @@ export default function Contact() {
                 {status === "success" ? t.contact.form.success : t.contact.form.error}
               </p>
             )}
-          </form>
+            </form>
+          </FadeIn>
         </div>
       </div>
     </section>

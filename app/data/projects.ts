@@ -2,6 +2,7 @@ export type Project = {
   title: string;
   slug: string;
   category: string;
+  categoryKey: "brandIdentity" | "publishing";
   image: string;
 
   year: string;
@@ -22,6 +23,7 @@ export const projects: Project[] = [
     title: "Kertész Szigszer",
     slug: "kertesz-szigszer",
     category: "Brand Identity",
+    categoryKey: "brandIdentity",
     image: "/projects/kertesz.jpg",
 
     year: "2025",
@@ -62,6 +64,7 @@ export const projects: Project[] = [
     title: "Gibi Gyöngy",
     slug: "gibi-gyongy",
     category: "Brand Identity",
+    categoryKey: "brandIdentity",
     image: "/projects/gibi.png",
 
     year: "",
@@ -78,6 +81,7 @@ export const projects: Project[] = [
     title: "Mazur",
     slug: "mazur",
     category: "Brand Identity",
+    categoryKey: "brandIdentity",
     image: "/projects/mazur.png",
 
     year: "",
@@ -94,6 +98,7 @@ export const projects: Project[] = [
     title: "Tisztafa",
     slug: "tisztafa",
     category: "Brand Identity",
+    categoryKey: "brandIdentity",
     image: "/projects/tisztafa.png",
 
     year: "",
@@ -110,6 +115,7 @@ export const projects: Project[] = [
     title: "Hermon Kertépítés",
     slug: "hermon-kertepites",
     category: "Brand Identity",
+    categoryKey: "brandIdentity",
     image: "/projects/hermon.png",
 
     year: "",
@@ -126,6 +132,7 @@ export const projects: Project[] = [
     title: "Szolnok Vár Projektkiadvány",
     slug: "szolnok-var",
     category: "Publishing",
+    categoryKey: "publishing",
     image: "/projects/Portfolio_20258.jpg",
 
     year: "",

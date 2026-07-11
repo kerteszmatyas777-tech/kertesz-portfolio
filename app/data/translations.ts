@@ -27,6 +27,57 @@ export const translations = {
       nextProject: "Next project",
       projectPagination: "Project navigation",
       goToProject: "Go to project",
+      viewProject: "View Project",
+      categories: {
+        brandIdentity: "Brand Identity",
+        publishing: "Publishing",
+      },
+      caseStudies: {
+        kerteszSzigszer: {
+          overview:
+            "Kertész Szigszer is a handcrafted herbal syrup brand built around authenticity, nature and premium quality.",
+          services: [
+            "Brand Strategy",
+            "Logo Design",
+            "Visual Identity",
+            "Print Design",
+          ],
+          challenge:
+            "Create a visual identity that communicates craftsmanship while standing out in a competitive market.",
+          solution:
+            "A clean visual system with refined typography and a timeless identity.",
+        },
+      },
+      caseStudyTemplates: {
+        brandIdentity: {
+          overview:
+            "A focused brand identity project shaped to give the business a clear, recognisable presence across its most important touchpoints.",
+          services: [
+            "Brand Direction",
+            "Logo Design",
+            "Visual Identity",
+            "Art Direction",
+          ],
+          challenge:
+            "Define a visual language that feels distinctive, consistent and ready to grow with the brand.",
+          solution:
+            "A flexible identity system built around strong typography, considered colour and a clear set of supporting elements.",
+        },
+        publishing: {
+          overview:
+            "An editorial project designed to turn information into a clear, engaging and well-crafted printed experience.",
+          services: [
+            "Editorial Direction",
+            "Layout Design",
+            "Typography",
+            "Print Production",
+          ],
+          challenge:
+            "Organise detailed content into a publication that is easy to navigate and rewarding to spend time with.",
+          solution:
+            "A considered editorial system that gives content hierarchy, rhythm and a coherent visual voice.",
+        },
+      },
       detail: {
         overview: "Overview",
         services: "Services",
@@ -162,14 +213,14 @@ export const translations = {
 
     hero: {
       eyebrow: "Arculattervező és grafikus",
-      title: "Márkákat formálok, amelyek megmaradnak.",
-      mobileTitle: ["Márkákat", "formálok,", "amelyek", "megmaradnak."],
+      title: "Segítek kitűnni a tömegből.",
+      mobileTitle: ["Segítek", "kitűnni a", "tömegből."],
       description:
         "Arculatot és vizuális rendszereket tervezek vendéglátóhelyeknek, szolgáltatóknak és növekedésre kész márkáknak — hogy felismerhetőek, következetesek és emlékezetesek legyenek.",
       mobileDescription:
-        "Tudatos márkaépítés és erős vizuális arculat ambiciózus vállalkozásoknak.",
-      projects: "Munkáim",
-      contact: "Beszéljünk",
+        "Arculattervezés vállalkozásoknak, amelyek készen állnak a következő lépésre.",
+      projects: "Projektjeim",
+      contact: "Beszéljünk!",
     },
 
     projects: {
@@ -180,6 +231,57 @@ export const translations = {
       nextProject: "Következő munka",
       projectPagination: "Munkák navigációja",
       goToProject: "Ugrás a munkához",
+      viewProject: "Projekt megnyitása",
+      categories: {
+        brandIdentity: "Márkaidentitás",
+        publishing: "Kiadványtervezés",
+      },
+      caseStudies: {
+        kerteszSzigszer: {
+          overview:
+            "A Kertész Szigszer kézműves gyógynövényszirup-márka, amelynek arculata a természetességre, a hitelességre és a prémium minőségre épül.",
+          services: [
+            "Márkastratégia",
+            "Logótervezés",
+            "Vizuális identitás",
+            "Nyomtatott anyagok",
+          ],
+          challenge:
+            "Olyan vizuális identitást kellett létrehozni, amely egyszerre fejezi ki a kézműves karaktert, és egy zsúfolt piacon is felismerhető.",
+          solution:
+            "Letisztult vizuális rendszer kifinomult tipográfiával és időtálló, következetesen használható arculattal.",
+        },
+      },
+      caseStudyTemplates: {
+        brandIdentity: {
+          overview:
+            "Tudatos arculati projekt, amely a márka legfontosabb megjelenésein egyértelmű, felismerhető karaktert ad a vállalkozásnak.",
+          services: [
+            "Márkairány meghatározása",
+            "Logótervezés",
+            "Vizuális identitás",
+            "Art direction",
+          ],
+          challenge:
+            "Olyan vizuális nyelv kialakítása, amely karakteres, következetes és a márka növekedésével is együtt tud fejlődni.",
+          solution:
+            "Rugalmas arculati rendszer erős tipográfiai alappal, tudatos színhasználattal és jól alkalmazható kiegészítő elemekkel.",
+        },
+        publishing: {
+          overview:
+            "Szerkesztett kiadványtervezési projekt, amely az információt átlátható, figyelemfelkeltő és igényes nyomtatott élménnyé alakítja.",
+          services: [
+            "Szerkesztési irány",
+            "Kiadványtervezés",
+            "Tipográfia",
+            "Nyomdai előkészítés",
+          ],
+          challenge:
+            "A részletes tartalom olyan kiadvánnyá szervezése, amely könnyen követhető és öröm időt tölteni vele.",
+          solution:
+            "Átgondolt szerkesztési rendszer, amely ritmust, hierarchiát és következetes vizuális hangot ad a tartalomnak.",
+        },
+      },
       detail: {
         overview: "Áttekintés",
         services: "Szolgáltatások",
@@ -208,7 +310,7 @@ export const translations = {
 
     services: {
       eyebrow: "Szakterületek",
-      title: "Amiben értéket adok",
+      title: "Amiben segítek",
       page: {
         deliverables: "A közös munka része",
         outcome: "A végeredmény",

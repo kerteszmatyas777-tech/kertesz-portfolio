@@ -14,13 +14,22 @@ type Props = {
 
 export default function ProjectPageContent({ project, nextProject }: Props) {
   const { language } = useLanguage();
-  const labels = translations[language].projects.detail;
+  const projectTranslations = translations[language].projects;
+  const labels = projectTranslations.detail;
+  const caseStudy =
+    project.slug === "kertesz-szigszer"
+      ? projectTranslations.caseStudies.kerteszSzigszer
+      : projectTranslations.caseStudyTemplates[project.categoryKey];
+  const overview = caseStudy.overview || project.overview;
+  const services = caseStudy.services.length ? caseStudy.services : project.services;
+  const challenge = caseStudy.challenge || project.challenge;
+  const solution = caseStudy.solution || project.solution;
   const hasDetails = Boolean(
-    project.overview ||
-      project.services.length ||
+    overview ||
+      services.length ||
       project.colors.length ||
-      project.challenge ||
-      project.solution ||
+      challenge ||
+      solution ||
       project.gallery.length
   );
 
@@ -28,7 +37,7 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
     <main className="min-h-screen bg-[#F8F9FB]">
       <section className="mx-auto max-w-[1600px] px-6 pb-0 pt-32 sm:px-8 lg:px-24 lg:pt-44">
         <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
-          {project.category}
+          {projectTranslations.categories[project.categoryKey]}
         </p>
 
         <h1 className="mt-6 break-words text-5xl font-bold leading-none tracking-[-0.05em] text-[var(--primary)] md:text-7xl xl:text-8xl">
@@ -50,16 +59,16 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
       <section className="mx-auto max-w-[1200px] px-6 py-20 sm:px-8 lg:px-0 lg:py-32">
         {hasDetails && (
           <>
-            {project.overview && (
+            {overview && (
               <DetailSection label={labels.overview}>
-                <p className="text-xl leading-10 text-slate-600">{project.overview}</p>
+                <p className="text-xl leading-10 text-slate-600">{overview}</p>
               </DetailSection>
             )}
 
-            {project.services.length > 0 && (
+            {services.length > 0 && (
               <DetailSection label={labels.services} className="mt-20 lg:mt-28">
                 <div className="flex flex-wrap gap-3 sm:gap-4">
-                  {project.services.map((service) => (
+                  {services.map((service) => (
                     <span
                       key={service}
                       className="rounded-full bg-white px-5 py-3 font-medium text-[var(--primary)] shadow-sm"
@@ -87,15 +96,15 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
               </DetailSection>
             )}
 
-            {project.challenge && (
+            {challenge && (
               <DetailSection label={labels.challenge} className="mt-20 lg:mt-32">
-                <p className="text-xl leading-10 text-slate-600">{project.challenge}</p>
+                <p className="text-xl leading-10 text-slate-600">{challenge}</p>
               </DetailSection>
             )}
 
-            {project.solution && (
+            {solution && (
               <DetailSection label={labels.solution} className="mt-20 lg:mt-28">
-                <p className="text-xl leading-10 text-slate-600">{project.solution}</p>
+                <p className="text-xl leading-10 text-slate-600">{solution}</p>
               </DetailSection>
             )}
 

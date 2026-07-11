@@ -103,26 +103,47 @@ export default function Navbar() {
 
           </div>
 
-          {/* Mobile Button */}
+          <div className="flex items-center gap-4 md:hidden">
+            <div className="flex items-center gap-2 text-sm font-semibold text-[var(--primary)]">
+              <button
+                type="button"
+                onClick={() => handleMobileLanguageChange("en")}
+                aria-pressed={language === "en"}
+                className={language === "en" ? "" : "opacity-40"}
+              >
+                EN
+              </button>
+              <span aria-hidden="true" className="text-[var(--primary)]/30">/</span>
+              <button
+                type="button"
+                onClick={() => handleMobileLanguageChange("hu")}
+                aria-pressed={language === "hu"}
+                className={language === "hu" ? "" : "opacity-40"}
+              >
+                HU
+              </button>
+            </div>
 
-          <button
-            onClick={() => setOpen(!open)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            aria-controls="mobile-navigation"
-            className="relative h-10 w-10 md:hidden"
-          >
-            <span
-              className={`absolute left-1/2 top-1/2 h-px w-8 -translate-x-1/2 bg-[var(--primary)] transition ${
-                open ? "rotate-45" : "-translate-y-1.5"
-              }`}
-            />
-            <span
-              className={`absolute left-1/2 top-1/2 h-px w-8 -translate-x-1/2 bg-[var(--primary)] transition ${
-                open ? "-rotate-45" : "translate-y-1.5"
-              }`}
-            />
-          </button>
+            <button
+              type="button"
+              onClick={() => setOpen(!open)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              aria-controls="mobile-navigation"
+              className="relative h-10 w-10"
+            >
+              <span
+                className={`absolute left-1/2 top-1/2 h-px w-8 -translate-x-1/2 bg-[var(--primary)] transition ${
+                  open ? "rotate-45" : "-translate-y-1.5"
+                }`}
+              />
+              <span
+                className={`absolute left-1/2 top-1/2 h-px w-8 -translate-x-1/2 bg-[var(--primary)] transition ${
+                  open ? "-rotate-45" : "translate-y-1.5"
+                }`}
+              />
+            </button>
+          </div>
 
         </div>
       </nav>
@@ -181,31 +202,9 @@ export default function Navbar() {
 
         <div className="border-t border-slate-200 pt-8">
 
-          <div className="flex items-center justify-between">
-
-            <div className="flex gap-6 text-lg font-semibold text-[var(--primary)]">
-              <button
-                onClick={() => handleMobileLanguageChange("en")}
-                aria-pressed={language === "en"}
-                className={language === "en" ? "" : "opacity-40"}
-              >
-                EN
-              </button>
-
-              <button
-                onClick={() => handleMobileLanguageChange("hu")}
-                aria-pressed={language === "hu"}
-                className={language === "hu" ? "" : "opacity-40"}
-              >
-                HU
-              </button>
-            </div>
-
-            <p className="text-sm tracking-[0.3em] uppercase text-slate-400">
-              Kertész Mátyás
-            </p>
-
-          </div>
+          <p className="text-sm tracking-[0.3em] uppercase text-slate-400">
+            Kertész Mátyás
+          </p>
 
         </div>
 

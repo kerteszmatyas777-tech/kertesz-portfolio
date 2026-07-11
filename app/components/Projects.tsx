@@ -5,6 +5,7 @@ import { projects } from "../data/projects";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
 import { useRef, useState } from "react";
+import FadeIn from "./FadeIn";
 
 export default function Projects() {
   const { language } = useLanguage();
@@ -60,13 +61,15 @@ export default function Projects() {
     >
       {/* Heading */}
 
-      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
-        {t.projects.eyebrow}
-      </p>
+      <FadeIn>
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+          {t.projects.eyebrow}
+        </p>
 
-      <h2 className="mt-5 text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)] md:text-6xl">
-        {t.projects.title}
-      </h2>
+        <h2 className="mt-5 text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-[var(--primary)] md:text-6xl">
+          {t.projects.title}
+        </h2>
+      </FadeIn>
 
       {/* Mobile */}
 
@@ -79,9 +82,10 @@ export default function Projects() {
           <ProjectCard
             key={project.slug}
             title={project.title}
-            category={project.category}
+            category={t.projects.categories[project.categoryKey]}
             image={project.image}
             slug={project.slug}
+            viewProject={t.projects.viewProject}
             mobile
           />
         ))}
@@ -129,14 +133,16 @@ export default function Projects() {
       {/* Desktop */}
 
       <div className="mt-20 hidden gap-14 lg:grid lg:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.slug}
-            title={project.title}
-            category={project.category}
-            image={project.image}
-            slug={project.slug}
-          />
+        {projects.map((project, index) => (
+          <FadeIn key={project.slug} delay={index * 0.07}>
+            <ProjectCard
+              title={project.title}
+              category={t.projects.categories[project.categoryKey]}
+              image={project.image}
+              slug={project.slug}
+              viewProject={t.projects.viewProject}
+            />
+          </FadeIn>
         ))}
       </div>
     </section>

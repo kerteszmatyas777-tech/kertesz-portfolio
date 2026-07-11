@@ -1,20 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export default function FadeIn({
   children,
+  className,
+  delay = 0,
 }: {
   children: React.ReactNode;
+  className?: string;
+  delay?: number;
 }) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 70 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
+      className={className}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 36 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18, margin: "0px 0px -8% 0px" }}
       transition={{
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1],
+        delay,
+        duration: 0.9,
+        ease: [0.16, 1, 0.3, 1],
       }}
     >
       {children}

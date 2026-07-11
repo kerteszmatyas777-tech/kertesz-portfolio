@@ -6,6 +6,7 @@ type Props = {
   category: string;
   image: string;
   slug: string;
+  viewProject: string;
   mobile?: boolean;
 };
 
@@ -14,6 +15,7 @@ export default function ProjectCard({
   category,
   image,
   slug,
+  viewProject,
   mobile = false,
 }: Props) {
   if (mobile) {
@@ -33,7 +35,7 @@ export default function ProjectCard({
           </h3>
 
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--primary)]/70 transition duration-300 group-hover:opacity-60">
-            View Project
+            {viewProject}
           </span>
         </div>
 
@@ -77,7 +79,7 @@ export default function ProjectCard({
             </h3>
 
             <span className="shrink-0 pt-1 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]/70 transition duration-300 group-hover:opacity-60">
-              View Project
+              {viewProject}
             </span>
 
           </div>
