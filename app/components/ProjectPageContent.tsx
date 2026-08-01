@@ -55,7 +55,7 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
           {project.title}
         </h1>
 
-        <div className="relative mt-12 aspect-[16/9] overflow-hidden rounded-[16px] shadow-[0_28px_65px_rgba(17,59,142,0.2)] sm:mt-16 sm:rounded-[22px]">
+        <div className="relative mt-12 aspect-[16/9] overflow-hidden rounded-[12px] shadow-[0_28px_65px_rgba(17,59,142,0.2)] sm:mt-16">
           <Image
             src={project.image}
             alt={`${project.title} project cover`}
@@ -96,7 +96,7 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
 
             {services.length > 0 && (
               <DetailSection label={labels.services} className="mt-24 lg:mt-36">
-                <div className="grid overflow-hidden rounded-[28px] border border-[var(--primary)]/10 bg-white sm:grid-cols-2">
+                <div className="grid overflow-hidden rounded-[12px] border border-[var(--primary)]/10 bg-white sm:grid-cols-2">
                   {services.map((service, index) => (
                     <div
                       key={service}
@@ -196,7 +196,7 @@ function BrandColours({ colors }: { colors: string[] }) {
       {colors.map((color) => (
         <div key={color}>
           <div
-            className="aspect-square rounded-[22px] shadow-lg sm:rounded-[28px]"
+            className="aspect-square rounded-[8px] shadow-lg"
             style={{ backgroundColor: color }}
           />
           <p className="mt-4 text-center font-medium text-slate-500">{color}</p>

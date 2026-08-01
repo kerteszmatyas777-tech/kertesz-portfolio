@@ -34,7 +34,7 @@ export default function Services() {
               className="group block md:h-full"
             >
             <article
-              className={`relative min-h-[11.5rem] overflow-hidden rounded-[22px] border border-[var(--primary)]/10 bg-white p-4 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-[var(--primary)]/25 group-hover:shadow-2xl md:h-full md:min-h-[17rem] md:rounded-[28px] md:p-7 ${
+              className={`relative min-h-[11.5rem] overflow-hidden rounded-[12px] border border-[var(--primary)]/10 bg-white p-4 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-[var(--primary)]/25 group-hover:shadow-2xl md:h-full md:min-h-[17rem] md:p-7 ${
                 language === "en" ? "min-h-[8.75rem]" : ""
               }`}
             >

@@ -49,14 +49,16 @@ export default function About() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.16}>
-          <Image
-            src="/images/about-portrait.png"
-            alt="Kertész Mátyás"
-            width={600}
-            height={700}
-            className="rounded-[18px]"
-          />
+        <FadeIn delay={0.16} className="lg:flex lg:justify-end">
+          <div className="relative aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-[12px]">
+            <Image
+              src="/images/profile-hero.jpg"
+              alt="Kertész Mátyás"
+              fill
+              sizes="(max-width: 1024px) 100vw, 520px"
+              className="object-cover object-[center_38%]"
+            />
+          </div>
         </FadeIn>
 
       </div>

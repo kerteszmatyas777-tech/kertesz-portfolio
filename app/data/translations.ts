@@ -289,7 +289,7 @@ export const translations = {
       caseStudies: {
         kerteszSzigszer: {
           overview:
-            "A Kertész Szigszer egy szigetelő és bádogzó cég, amely a gépészeti szigetelés területén nyújt professzionális szolgáltatásokat.",
+            "A Kertész Szigszer egy szigetelő és bádogozó cég, amely a gépészeti szigetelés területén nyújt professzionális szolgáltatásokat.",
           services: [
             "Logótervezés",
             "Pólónyomtatás",

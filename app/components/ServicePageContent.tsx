@@ -59,7 +59,7 @@ export default function ServicePageContent({ slug }: Props) {
             {t.services.page.deliverables}
           </p>
 
-          <div className="overflow-hidden rounded-[28px] border border-[var(--primary)]/10 bg-white">
+          <div className="overflow-hidden rounded-[12px] border border-[var(--primary)]/10 bg-white">
             {service.deliverables.map((item) => (
               <div
                 key={item}
@@ -72,7 +72,7 @@ export default function ServicePageContent({ slug }: Props) {
           </div>
         </div>
 
-        <div className="mt-24 rounded-[32px] bg-[var(--primary)] px-7 py-10 text-white md:px-12 md:py-14">
+        <div className="mt-24 rounded-[14px] bg-[var(--primary)] px-7 py-10 text-white md:px-12 md:py-14">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold leading-[0.98] tracking-[-0.04em] md:text-5xl">
               {t.services.page.ctaTitle}

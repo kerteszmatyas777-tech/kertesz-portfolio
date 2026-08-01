@@ -96,15 +96,15 @@ export default function Hero() {
           transition={{ delay: 0.5 }}
           className="-mx-6 mt-auto flex w-[calc(100%+3rem)] justify-center pt-8"
         >
-          <div className="relative aspect-[4/3] w-full overflow-hidden shadow-[0_18px_42px_rgba(17,59,142,0.18)]">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[12px] shadow-[0_18px_42px_rgba(17,59,142,0.18)]">
 
             <Image
-              src="/images/profile2.png"
+              src="/images/profile-work.jpg"
               alt="Kertész Mátyás"
               fill
               priority
               sizes="100vw"
-              className="object-cover object-[center_40%]"
+              className="object-cover object-[center_42%]"
             />
 
           </div>
@@ -167,15 +167,15 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="flex justify-end"
         >
-          <div className="relative h-[min(650px,68vh)] w-full max-w-[600px] overflow-hidden rounded-[22px] shadow-[0_28px_65px_rgba(17,59,142,0.2)]">
+          <div className="relative h-[min(650px,68vh)] w-full max-w-[600px] overflow-hidden rounded-[14px] shadow-[0_28px_65px_rgba(17,59,142,0.2)]">
 
             <Image
-              src="/images/profile2.png"
+              src="/images/profile-work.jpg"
               alt="Kertész Mátyás"
               fill
               priority
               sizes="(max-width: 1024px) 76vw, 600px"
-              className="object-cover"
+              className="object-cover object-[center_42%]"
             />
 
           </div>

@@ -175,7 +175,7 @@ export default function Contact() {
             <form
             id="project-brief"
             onSubmit={handleSubmit}
-            className="min-w-0 scroll-mt-28 rounded-[32px] border border-[var(--primary)]/10 bg-[#F8F9FB] p-6 sm:p-8 lg:p-10"
+            className="min-w-0 scroll-mt-28 rounded-[16px] border border-[var(--primary)]/10 bg-[#F8F9FB] p-6 sm:p-8 lg:p-10"
           >
             <h3 className="text-[2.35rem] font-bold leading-[0.94] tracking-[-0.045em] text-[var(--primary)] md:text-4xl">
               {t.contact.form.title}

@@ -49,7 +49,7 @@ export default function ProjectGallery({
                 image={images[0]}
                 alt={imageAlt(0)}
                 label={`${labels.viewImage}: ${imageAlt(0)}`}
-                className="aspect-[16/9] rounded-[18px]"
+                className="aspect-[16/9] rounded-[12px]"
                 priority
                 onClick={() => setCurrent(0)}
               />
@@ -60,7 +60,7 @@ export default function ProjectGallery({
                 image={images[1]}
                 alt={imageAlt(1)}
                 label={`${labels.viewImage}: ${imageAlt(1)}`}
-                className="aspect-[16/9] rounded-[18px]"
+                className="aspect-[16/9] rounded-[12px]"
                 onClick={() => setCurrent(1)}
               />
             )}
@@ -75,7 +75,7 @@ export default function ProjectGallery({
                     image={image}
                     alt={imageAlt(imageIndex)}
                     label={`${labels.viewImage}: ${imageAlt(imageIndex)}`}
-                    className="aspect-[16/9] rounded-[16px]"
+                    className="aspect-[16/9] rounded-[10px]"
                     onClick={() => setCurrent(imageIndex)}
                   />
                 );
@@ -92,7 +92,7 @@ export default function ProjectGallery({
                 image={image}
                 alt={imageAlt(index)}
                 label={`${labels.viewImage}: ${imageAlt(index)}`}
-                className="aspect-[16/9] rounded-[16px]"
+                className="aspect-[16/9] rounded-[10px]"
                 priority={index === 0}
                 onClick={() => setCurrent(index)}
               />
@@ -108,7 +108,7 @@ export default function ProjectGallery({
             type="button"
             onClick={() => setCurrent(0)}
             aria-label={`${labels.viewImage}: ${imageAlt(0)}`}
-            className="group relative block aspect-[16/9] w-full overflow-hidden rounded-[18px] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)]"
+            className="group relative block aspect-[16/9] w-full overflow-hidden rounded-[12px] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)]"
           >
             <Image
               src={images[0]}
@@ -126,7 +126,7 @@ export default function ProjectGallery({
               type="button"
               onClick={() => setCurrent(1)}
               aria-label={`${labels.viewImage}: ${imageAlt(1)}`}
-              className="group relative block aspect-[4/5] w-full overflow-hidden rounded-[16px] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)]"
+              className="group relative block aspect-[4/5] w-full overflow-hidden rounded-[10px] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)]"
             >
               <Image
                 src={images[1]}
@@ -142,7 +142,7 @@ export default function ProjectGallery({
               type="button"
               onClick={() => setCurrent(2)}
               aria-label={`${labels.viewImage}: ${imageAlt(2)}`}
-              className="group relative block aspect-square w-full overflow-hidden rounded-[16px] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)]"
+              className="group relative block aspect-square w-full overflow-hidden rounded-[10px] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)]"
             >
               <Image
                 src={images[2]}
@@ -160,7 +160,7 @@ export default function ProjectGallery({
             type="button"
             onClick={() => setCurrent(3)}
             aria-label={`${labels.viewImage}: ${imageAlt(3)}`}
-            className="group relative block aspect-[21/9] w-full overflow-hidden rounded-[18px] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)]"
+            className="group relative block aspect-[21/9] w-full overflow-hidden rounded-[12px] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)]"
           >
             <Image
               src={images[3]}

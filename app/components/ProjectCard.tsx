@@ -39,7 +39,7 @@ export default function ProjectCard({
           </span>
         </div>
 
-        <div className="relative mt-5 aspect-[4/3] overflow-hidden rounded-[14px]">
+        <div className="relative mt-5 aspect-[4/3] overflow-hidden rounded-[10px]">
           <Image
             src={image}
             alt={title}
@@ -54,7 +54,7 @@ export default function ProjectCard({
 
   return (
     <Link href={`/projects/${slug}`} className="group block h-full">
-      <div className="flex h-full flex-col overflow-hidden rounded-[18px] bg-white shadow-[0_12px_30px_rgba(17,59,142,0.1)] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+      <div className="flex h-full flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_12px_30px_rgba(17,59,142,0.1)] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
         <div className="relative aspect-[16/10] overflow-hidden">
           <Image
