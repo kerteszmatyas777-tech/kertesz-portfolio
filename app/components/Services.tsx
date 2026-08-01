@@ -26,15 +26,15 @@ export default function Services() {
 
       <div className="mt-14 h-px bg-[var(--primary)]/10" />
 
-      <div className="mt-4 grid gap-4 md:grid-cols-3">
+      <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {t.services.items.map((service, index) => (
-          <FadeIn key={service.title} delay={index * 0.1}>
+          <FadeIn key={service.title} delay={index * 0.1} className="h-full">
             <Link
               href={`/services/${service.slug}`}
-              className="group block"
+              className="group block md:h-full"
             >
             <article
-              className={`relative min-h-[11.5rem] overflow-hidden rounded-[22px] border border-[var(--primary)]/10 bg-white p-4 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-[var(--primary)]/25 group-hover:shadow-2xl md:min-h-[20rem] md:rounded-[28px] md:p-10 ${
+              className={`relative min-h-[11.5rem] overflow-hidden rounded-[22px] border border-[var(--primary)]/10 bg-white p-4 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-[var(--primary)]/25 group-hover:shadow-2xl md:h-full md:min-h-[17rem] md:rounded-[28px] md:p-7 ${
                 language === "en" ? "min-h-[8.75rem]" : ""
               }`}
             >
@@ -51,11 +51,10 @@ export default function Services() {
               </div>
 
               <div className="relative flex h-full flex-col">
-                <h3 className="mt-2 max-w-full break-words text-[1.4rem] font-bold leading-[0.98] tracking-[-0.04em] text-[var(--primary)] transition-transform duration-500 group-hover:translate-x-1 md:mt-8 md:text-[2rem]">
+                <h3 className="mt-2 max-w-full break-words text-[1.4rem] font-bold leading-[0.98] tracking-[-0.04em] text-[var(--primary)] transition-transform duration-500 group-hover:translate-x-1 md:mt-5 md:text-[1.7rem]">
                   {language === "hu" && index === 0 ? (
                     <>
-                      Arculat és
-                      <br className="md:hidden" /> márkaidentitás
+                      Arculatterv
                     </>
                   ) : language === "hu" && index === 2 ? (
                     <>
@@ -67,11 +66,11 @@ export default function Services() {
                   )}
                 </h3>
 
-                <p className="mt-2 max-w-xs break-words text-xs leading-5 text-slate-600 md:mt-5 md:text-base md:leading-7">
+                <p className="mt-2 max-w-xs break-words text-xs leading-5 text-slate-600 md:mt-4 md:text-sm md:leading-6">
                   {service.description}
                 </p>
 
-                <div className="mt-auto pt-3 md:pt-10">
+                <div className="mt-auto pt-3 md:pt-6">
                   <div className="h-px w-12 bg-[var(--primary)]/25 transition-all duration-500 group-hover:w-20 group-hover:bg-[var(--primary)]" />
                 </div>
               </div>

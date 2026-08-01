@@ -2,6 +2,7 @@ export const serviceSlugs = [
   "brand-identity",
   "print-design",
   "digital-content",
+  "web-design",
 ] as const;
 
 export type ServiceSlug = (typeof serviceSlugs)[number];

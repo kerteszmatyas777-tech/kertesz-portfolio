@@ -35,17 +35,29 @@ export const translations = {
       caseStudies: {
         kerteszSzigszer: {
           overview:
-            "Kertész Szigszer is a handcrafted herbal syrup brand built around authenticity, nature and premium quality.",
+            "Kertész Szigszer is an insulation and sheet metal company providing professional services in the field of mechanical insulation.",
           services: [
-            "Brand Strategy",
             "Logo Design",
-            "Visual Identity",
-            "Print Design",
+            "T-shirt Printing",
           ],
           challenge:
-            "Create a visual identity that communicates craftsmanship while standing out in a competitive market.",
+            "The goal was to design a modern and easily recognisable logo for Kertész Szigszer Kft. that communicates trust and works clearly on workwear.",
           solution:
-            "A clean visual system with refined typography and a timeless identity.",
+            "I created a clean, structured logo and prepared the T-shirt print application, giving the company a professional and recognisable workwear presence.",
+        },
+        gibiGyongy: {
+          overview:
+            "Gibi Gyöngy is a bead distribution company and webshop with an existing customer base, ready to move from a familiar local presence toward a more distinctive, consistent and memorable brand experience.",
+          services: [
+            "Brand Identity",
+            "Logo System",
+            "Visual Communication",
+            "Social Media Direction",
+          ],
+          challenge:
+            "My challenge was to express the brand’s variety, precision and high quality while balancing traditional values with a modern visual style.",
+          solution:
+            "I built a harmonious visual system around an elegant symbol, refined colours and consistent digital assets, giving Gibi Gyöngy a modern, cohesive and memorable presence across social media and online touchpoints.",
         },
       },
       caseStudyTemplates: {
@@ -82,6 +94,7 @@ export const translations = {
         overview: "Overview",
         services: "Services",
         colours: "Brand colours",
+        socialMedia: "Social Media",
         challenge: "Challenge",
         solution: "Solution",
         nextProject: "Next project",
@@ -89,6 +102,11 @@ export const translations = {
         closePreview: "Close image preview",
         previousImage: "Previous image",
         nextImage: "Next image",
+        ctaEyebrow: "Let’s build yours",
+        ctaTitle: "Like what you see?",
+        ctaDescription:
+          "If you are ready for a clearer, more memorable brand presence, let’s talk about your project.",
+        ctaButton: "Start a project",
       },
     },
 
@@ -163,6 +181,22 @@ export const translations = {
           outcome:
             "A more confident, cohesive presence that helps your brand stand out without looking like everyone else.",
         },
+        {
+          slug: "web-design",
+          title: "Web Design",
+          description:
+            "Clear, considered websites that turn your visual identity into an engaging digital experience.",
+          intro:
+            "A well-designed website gives your brand a considered home online — clear to navigate, memorable to experience and built around your goals.",
+          deliverables: [
+            "Website structure and content hierarchy",
+            "Creative direction and interface design",
+            "Responsive page designs for every screen",
+            "A clear handover for development",
+          ],
+          outcome:
+            "A focused digital presence that makes it easier for the right people to understand, trust and choose your business.",
+        },
       ],
     },
 
@@ -186,11 +220,14 @@ export const translations = {
         sending: "Sending…",
         success: "Thank you — your message has been sent.",
         error: "Something went wrong. Please try again or email me directly.",
+        fallback:
+          "The email window has opened with your message. Please send it from there.",
         mailSubject: "New project enquiry",
         services: [
           "Brand identity",
           "Print design",
           "Digital content",
+          "Web design",
           "I need guidance",
         ],
         referrals: ["Instagram", "Facebook", "LinkedIn", "Word of mouth", "Other"],
@@ -246,23 +283,35 @@ export const translations = {
       goToProject: "Ugrás a munkához",
       viewProject: "Projekt megnyitása",
       categories: {
-        brandIdentity: "Márkaidentitás",
+        brandIdentity: "Arculatterv",
         publishing: "Kiadványtervezés",
       },
       caseStudies: {
         kerteszSzigszer: {
           overview:
-            "A Kertész Szigszer kézműves gyógynövényszirup-márka, amelynek arculata a természetességre, a hitelességre és a prémium minőségre épül.",
+            "A Kertész Szigszer egy szigetelő és bádogzó cég, amely a gépészeti szigetelés területén nyújt professzionális szolgáltatásokat.",
           services: [
-            "Márkastratégia",
             "Logótervezés",
-            "Vizuális identitás",
-            "Nyomtatott anyagok",
+            "Pólónyomtatás",
           ],
           challenge:
-            "Olyan vizuális identitást kellett létrehozni, amely egyszerre fejezi ki a kézműves karaktert, és egy zsúfolt piacon is felismerhető.",
+            "A projekt célja egy modern és könnyen felismerhető logó megtervezése volt a Kertész Szigszer Kft. számára, amely bizalmat sugároz, és jól működik munkaruházaton.",
           solution:
-            "Letisztult vizuális rendszer kifinomult tipográfiával és időtálló, következetesen használható arculattal.",
+            "Egy letisztult, strukturált logót terveztem, majd elkészítettem a pólónyomtatáshoz szükséges alkalmazást, hogy a cég professzionális és könnyen felismerhető munkaruházati megjelenést kapjon.",
+        },
+        gibiGyongy: {
+          overview:
+            "A Gibi Gyöngy egy gyöngyforgalmazó cég és webshop, amely már meglévő vásárlói körrel rendelkezett, de szeretett volna egyről a kettőre lépni.",
+          services: [
+            "Arculattervezés",
+            "Logórendszer",
+            "Vizuális kommunikáció",
+            "Social media irány",
+          ],
+          challenge:
+            "A kihívás számomra az volt, hogy a márka sokszínűségét, precizitását és magas minőségét úgy jelenítsem meg, hogy közben harmonikusan ötvözze a hagyományos értékeket a modern stílussal.",
+          solution:
+            "Az arculatot egy elegáns jelrendszerre, harmonikus színhasználatra és egységes digitális megjelenésre építettem. A végeredmény modern, következetes és könnyen felismerhető márkajelenlét, amely támogatja a Gibi Gyöngy hazai és nemzetközi láthatóságának növelését.",
         },
       },
       caseStudyTemplates: {
@@ -299,6 +348,7 @@ export const translations = {
         overview: "Áttekintés",
         services: "Szolgáltatások",
         colours: "Arculati színek",
+        socialMedia: "Social Media",
         challenge: "Kihívás",
         solution: "Megoldás",
         nextProject: "Következő munka",
@@ -306,6 +356,11 @@ export const translations = {
         closePreview: "Képelőnézet bezárása",
         previousImage: "Előző kép",
         nextImage: "Következő kép",
+        ctaEyebrow: "Dolgozzunk együtt",
+        ctaTitle: "Tetszik, amit látsz?",
+        ctaDescription:
+          "Ha szeretnél egy felismerhetőbb, egységesebb és emlékezetesebb márkajelenlétet, beszéljünk a projektedről.",
+        ctaButton: "Kapcsolatfelvétel",
       },
     },
 
@@ -334,7 +389,7 @@ export const translations = {
       items: [
         {
           slug: "brand-identity",
-          title: "Arculat és márkaidentitás",
+          title: "Arculatterv",
           description:
             "Logó, vizuális rendszer és használati irányelvek, amelyek minden felületen felismerhetővé teszik a márka saját karakterét.",
           intro:
@@ -380,6 +435,22 @@ export const translations = {
           outcome:
             "Magabiztosabb, egységesebb digitális jelenlét, amely segít kitűnni anélkül, hogy elveszítenéd a márka saját hangját.",
         },
+        {
+          slug: "web-design",
+          title: "Webdesign",
+          description:
+            "Letisztult, átgondolt weboldalak, amelyek a márka arculatát erős digitális élménnyé formálják.",
+          intro:
+            "Egy jól megtervezett weboldal biztos online otthont ad a márkádnak: könnyen használható, emlékezetes és a céljaidra épül.",
+          deliverables: [
+            "Weboldalstruktúra és tartalmi hierarchia",
+            "Kreatív irány és felülettervezés",
+            "Reszponzív oldaltervek minden képernyőre",
+            "Átlátható fejlesztői átadás",
+          ],
+          outcome:
+            "Egy fókuszált digitális jelenlét, amely segít, hogy a megfelelő emberek megértsék, megbízzanak a márkádban és téged válasszanak.",
+        },
       ],
     },
 
@@ -404,11 +475,14 @@ export const translations = {
         sending: "Küldés…",
         success: "Köszönöm — az üzeneted megérkezett.",
         error: "Valami nem sikerült. Próbáld újra, vagy írj közvetlenül e-mailt.",
+        fallback:
+          "Megnyílt az email ablak az üzeneteddel. Kérlek, onnan küldd el.",
         mailSubject: "Új projektmegkeresés",
         services: [
-          "Arculat és márkaidentitás",
+          "Arculatterv",
           "Nyomtatott kommunikáció",
           "Digitális megjelenés",
+          "Webdesign",
           "Még keresem az irányt",
         ],
         referrals: ["Instagram", "Facebook", "LinkedIn", "Ajánlás útján", "Egyéb"],

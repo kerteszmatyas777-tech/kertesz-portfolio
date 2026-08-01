@@ -19,7 +19,7 @@ export default function NextProject({ project, label }: Props) {
         {project.title}
       </h2>
 
-      <div className="relative mt-10 aspect-[16/8] overflow-hidden rounded-[40px]">
+      <div className="relative mt-10 aspect-[16/8] overflow-hidden rounded-[20px]">
         <Image
           src={project.image}
           alt={project.title}

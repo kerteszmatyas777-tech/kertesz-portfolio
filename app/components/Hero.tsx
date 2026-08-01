@@ -167,7 +167,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="flex justify-end"
         >
-          <div className="relative h-[min(650px,68vh)] w-full max-w-[600px] overflow-hidden rounded-[40px] shadow-[0_28px_65px_rgba(17,59,142,0.2)]">
+          <div className="relative h-[min(650px,68vh)] w-full max-w-[600px] overflow-hidden rounded-[22px] shadow-[0_28px_65px_rgba(17,59,142,0.2)]">
 
             <Image
               src="/images/profile2.png"

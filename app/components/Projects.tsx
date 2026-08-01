@@ -82,7 +82,7 @@ export default function Projects() {
           <ProjectCard
             key={project.slug}
             title={project.title}
-            category={t.projects.categories[project.categoryKey]}
+            category={project.categoryLabel?.[language] ?? t.projects.categories[project.categoryKey]}
             image={project.image}
             slug={project.slug}
             viewProject={t.projects.viewProject}
@@ -134,10 +134,10 @@ export default function Projects() {
 
       <div className="mt-20 hidden gap-14 lg:grid lg:grid-cols-2">
         {projects.map((project, index) => (
-          <FadeIn key={project.slug} delay={index * 0.07}>
+          <FadeIn key={project.slug} delay={index * 0.07} className="h-full">
             <ProjectCard
               title={project.title}
-              category={t.projects.categories[project.categoryKey]}
+              category={project.categoryLabel?.[language] ?? t.projects.categories[project.categoryKey]}
               image={project.image}
               slug={project.slug}
               viewProject={t.projects.viewProject}

@@ -55,7 +55,7 @@ export default function About() {
             alt="Kertész Mátyás"
             width={600}
             height={700}
-            className="rounded-[32px]"
+            className="rounded-[18px]"
           />
         </FadeIn>
 

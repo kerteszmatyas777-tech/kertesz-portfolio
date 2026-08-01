@@ -3,6 +3,10 @@ export type Project = {
   slug: string;
   category: string;
   categoryKey: "brandIdentity" | "publishing";
+  categoryLabel?: {
+    en: string;
+    hu: string;
+  };
   image: string;
 
   year: string;
@@ -16,6 +20,9 @@ export type Project = {
   solution: string;
 
   gallery: string[];
+  galleryEn?: string[];
+  galleryLayout?: "mixed" | "wideGrid";
+  socialMediaGallery?: string[];
 };
 
 export const projects: Project[] = [
@@ -24,40 +31,45 @@ export const projects: Project[] = [
     slug: "kertesz-szigszer",
     category: "Brand Identity",
     categoryKey: "brandIdentity",
+    categoryLabel: {
+      en: "Logo Design",
+      hu: "Logótervezés",
+    },
     image: "/projects/kertesz.jpg",
 
     year: "2025",
     client: "Kertész Szigszer",
 
     services: [
-      "Brand Strategy",
       "Logo Design",
-      "Visual Identity",
-      "Print Design",
+      "T-shirt Printing",
     ],
 
     colors: [
-      "#113B8E",
-      "#F8F9FB",
-      "#2F2F2F",
-      "#D8C7A1",
+      "#144422",
+      "#94865F",
+      "#1E1E1C",
+      "#EFEFEF",
     ],
 
     overview:
-      "Kertész Szigszer is a handcrafted herbal syrup brand built around authenticity, nature and premium quality.",
+      "Kertész Szigszer is an insulation and sheet metal company providing professional services in the field of mechanical insulation.",
 
     challenge:
-      "Create a visual identity that communicates craftsmanship while standing out in a competitive market.",
+      "The goal was to create a modern and easily recognisable logo for Kertész Szigszer Kft. that communicates trust and works clearly on workwear.",
 
     solution:
-      "A clean visual system with refined typography and a timeless identity.",
+      "I designed a clean, structured logo and prepared the T-shirt print application, giving the company a professional and recognisable workwear presence.",
 
     gallery: [
-      "/projects/kertesz.jpg",
-      "/projects/kertesz.jpg",
-      "/projects/kertesz.jpg",
-      "/projects/kertesz.jpg",
+      "/projects/kertesz-szigszer/kertesz-szigszer-gallery-01.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-03.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-07.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-02.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-04.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-01.png",
     ],
+    galleryLayout: "wideGrid",
   },
 
   {
@@ -70,11 +82,35 @@ export const projects: Project[] = [
     year: "",
     client: "",
     services: [],
-    colors: [],
+    colors: [
+      "#2A3F31",
+      "#A6B798",
+      "#821714",
+      "#D6A64B",
+      "#AF1F59",
+      "#150D0D",
+      "#F5F4F2",
+    ],
     overview: "",
     challenge: "",
     solution: "",
-    gallery: [],
+    gallery: [
+      "/projects/gibi-gyongy/gibi-gyongy-07.png",
+      "/projects/gibi-gyongy/gibi-gyongy-01.png",
+      "/projects/gibi-gyongy/gibi-gyongy-06.png",
+      "/projects/gibi-gyongy/gibi-gyongy-05.png",
+    ],
+    galleryEn: [
+      "/projects/gibi-gyongy/gibi-gyongy-07.png",
+      "/projects/gibi-gyongy/gibi-gyongy-02-en.png",
+      "/projects/gibi-gyongy/gibi-gyongy-06.png",
+      "/projects/gibi-gyongy/gibi-gyongy-05.png",
+    ],
+    galleryLayout: "wideGrid",
+    socialMediaGallery: [
+      "/projects/gibi-gyongy/gibi-gyongy-04.png",
+      "/projects/gibi-gyongy/gibi-gyongy-03.png",
+    ],
   },
 
   {

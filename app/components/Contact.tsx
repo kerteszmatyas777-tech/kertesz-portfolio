@@ -16,9 +16,28 @@ export default function Contact() {
   const [deadline, setDeadline] = useState("");
   const [message, setMessage] = useState("");
   const [website, setWebsite] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
-    "idle"
-  );
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error" | "fallback"
+  >("idle");
+
+  const mailtoHref = () => {
+    const subject = encodeURIComponent(t.contact.form.mailSubject);
+    const body = encodeURIComponent(
+      [
+        `${t.contact.form.nameLabel}: ${name}`,
+        `${t.contact.form.emailLabel}: ${email}`,
+        `${t.contact.form.serviceLabel}: ${service}`,
+        `${t.contact.form.budgetLabel}: ${budget}`,
+        `${t.contact.form.deadlineLabel}: ${deadline || "-"}`,
+        `${t.contact.form.referralLabel}: ${referral || "-"}`,
+        "",
+        `${t.contact.form.messageLabel}:`,
+        message,
+      ].join("\n")
+    );
+
+    return `mailto:kerteszmatyas777@gmail.com?subject=${subject}&body=${body}`;
+  };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -31,7 +50,15 @@ export default function Contact() {
         body: JSON.stringify({ name, email, service, budget, referral, deadline, message, website }),
       });
 
-      if (!response.ok) throw new Error("Unable to send contact form.");
+      if (!response.ok) {
+        if (response.status === 502 || response.status === 503) {
+          setStatus("fallback");
+          window.location.href = mailtoHref();
+          return;
+        }
+
+        throw new Error("Unable to send contact form.");
+      }
 
       setName("");
       setEmail("");
@@ -301,7 +328,11 @@ export default function Contact() {
                 role={status === "success" ? "status" : "alert"}
                 aria-live="polite"
               >
-                {status === "success" ? t.contact.form.success : t.contact.form.error}
+                {status === "success"
+                  ? t.contact.form.success
+                  : status === "fallback"
+                    ? t.contact.form.fallback
+                    : t.contact.form.error}
               </p>
             )}
             </form>
