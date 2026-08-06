@@ -226,6 +226,33 @@ export const translations = {
       ],
     },
 
+    testimonials: {
+      eyebrow: "Client Words",
+      title: "What people say about working with me",
+      description:
+        "Feedback from projects where clear thinking, refined visuals and a reliable process mattered just as much as the final design.",
+      items: [
+        {
+          project: "Brand Identity",
+          quote:
+            "Mátyás quickly understood what we wanted to communicate and turned it into a clear, professional visual direction.",
+          context: "Visual identity and brand applications",
+        },
+        {
+          project: "Logo Design",
+          quote:
+            "The final logo felt simple, memorable and easy to use across the places where our brand needs to appear.",
+          context: "Logo system and practical rollout",
+        },
+        {
+          project: "Digital Presence",
+          quote:
+            "The process was thoughtful and calm from start to finish. Every detail had a reason behind it.",
+          context: "Social media and visual communication",
+        },
+      ],
+    },
+
     contact: {
       eyebrow: "Contact",
       title: "Let\u0027s create something memorable.",
@@ -502,6 +529,33 @@ export const translations = {
           ],
           outcome:
             "Egy fókuszált digitális jelenlét, amely segít, hogy a megfelelő emberek megértsék, megbízzanak a márkádban és téged válasszanak.",
+        },
+      ],
+    },
+
+    testimonials: {
+      eyebrow: "Visszajelzések",
+      title: "Ezeket mondták rólam",
+      description:
+        "Néhány gondolat olyan közös munkákból, ahol a tiszta gondolkodás, az igényes vizuális világ és a megbízható folyamat egyaránt fontos volt.",
+      items: [
+        {
+          project: "Arculatterv",
+          quote:
+            "Mátyás gyorsan megértette, mit szeretnénk közvetíteni, és ezt egy tiszta, professzionális vizuális iránnyá formálta.",
+          context: "Arculat és vizuális alkalmazások",
+        },
+        {
+          project: "Logótervezés",
+          quote:
+            "A végső logó egyszerű, emlékezetes és könnyen használható lett minden olyan felületen, ahol a márkánk megjelenik.",
+          context: "Logórendszer és gyakorlati alkalmazás",
+        },
+        {
+          project: "Digitális megjelenés",
+          quote:
+            "A közös munka végig átgondolt és nyugodt volt. Minden részlet mögött volt egy világos döntés.",
+          context: "Social media és vizuális kommunikáció",
         },
       ],
     },
