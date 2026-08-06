@@ -118,16 +118,36 @@ export const projects: Project[] = [
     slug: "mazur",
     category: "Brand Identity",
     categoryKey: "brandIdentity",
-    image: "/projects/mazur.png",
+    image: "/projects/mazur/mazur-02.png",
 
-    year: "",
-    client: "",
-    services: [],
-    colors: [],
-    overview: "",
-    challenge: "",
-    solution: "",
-    gallery: [],
+    year: "2025",
+    client: "Mazur",
+    services: [
+      "Logo Design",
+      "Visual Identity",
+      "Brand Applications",
+    ],
+    colors: [
+      "#4B69B1",
+      "#010101",
+      "#B6A393",
+      "#F8F8F8",
+    ],
+    overview:
+      "Mazur is a tiling, bathroom and construction business with a visual identity built around a clean geometric mark.",
+    challenge:
+      "The goal was to create a simple and memorable logo inspired by the visual language of tiles, drains and bathroom details.",
+    solution:
+      "I transformed the rhythm of a drain pattern into a flexible symbol, paired with clear typography and practical brand applications.",
+    gallery: [
+      "/projects/mazur/mazur-02.png",
+      "/projects/mazur/mazur-04.png",
+      "/projects/mazur/mazur-05.png",
+      "/projects/mazur/mazur-07.png",
+      "/projects/mazur/mazur-03.png",
+      "/projects/mazur/mazur-01.png",
+    ],
+    galleryLayout: "wideGrid",
   },
 
   {
@@ -152,16 +172,42 @@ export const projects: Project[] = [
     slug: "hermon-kertepites",
     category: "Brand Identity",
     categoryKey: "brandIdentity",
-    image: "/projects/hermon.png",
+    image: "/projects/hermon/hermon-02.png",
 
-    year: "",
-    client: "",
-    services: [],
-    colors: [],
-    overview: "",
-    challenge: "",
-    solution: "",
-    gallery: [],
+    year: "2025",
+    client: "Hermon Kertépítés",
+    services: [
+      "Brand Identity",
+      "Logo Design",
+      "Visual Applications",
+    ],
+    colors: [
+      "#ECF3E1",
+      "#76B94E",
+      "#4B8832",
+      "#FCFDF8",
+    ],
+    overview:
+      "Hermon Kertépítés is a landscaping brand built around the symbols of mountain, water and natural abundance.",
+    challenge:
+      "The goal was to create an approachable, recognisable identity that connects garden building with growth, freshness and trust.",
+    solution:
+      "I created a simple symbol combining a mountain form with rising water and organic shapes, supported by a fresh green palette and practical brand applications.",
+    gallery: [
+      "/projects/hermon/hermon-02.png",
+      "/projects/hermon/hermon-01.png",
+      "/projects/hermon/hermon-05.png",
+      "/projects/hermon/hermon-04.png",
+      "/projects/hermon/hermon-07.png",
+    ],
+    galleryEn: [
+      "/projects/hermon/hermon-02.png",
+      "/projects/hermon/hermon-01.png",
+      "/projects/hermon/hermon-03.png",
+      "/projects/hermon/hermon-04.png",
+      "/projects/hermon/hermon-07.png",
+    ],
+    galleryLayout: "wideGrid",
   },
 
   {

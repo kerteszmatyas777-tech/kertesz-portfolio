@@ -59,6 +59,32 @@ export const translations = {
           solution:
             "I built a harmonious visual system around an elegant symbol, refined colours and consistent digital assets, giving Gibi Gyöngy a modern, cohesive and memorable presence across social media and online touchpoints.",
         },
+        mazur: {
+          overview:
+            "Mazur is a tiling, bathroom and construction business. The identity needed to feel clean, technical and easy to recognise in both premium interior contexts and everyday work applications.",
+          services: [
+            "Logo Design",
+            "Visual Identity",
+            "Brand Applications",
+          ],
+          challenge:
+            "The challenge was to create a simple, memorable symbol that connects naturally to tiles, bathrooms and precise construction work without becoming overly literal.",
+          solution:
+            "I used the rhythm of a drain pattern as the starting point and translated it into a geometric mark, supported by clear typography, a restrained colour palette and flexible visual applications.",
+        },
+        hermonKertepites: {
+          overview:
+            "Hermon Kertépítés is a landscaping brand whose name refers to Mount Hermon, a biblical mountain associated with abundance, water and life-giving freshness.",
+          services: [
+            "Brand Identity",
+            "Logo Design",
+            "Visual Applications",
+          ],
+          challenge:
+            "The challenge was to turn these symbolic references into an approachable identity that still feels practical, friendly and easy to recognise for a garden-building business.",
+          solution:
+            "I built the logo around a simple mountain form, rising water and organic shapes. The fresh green palette and clear applications give the brand a natural, optimistic and memorable presence.",
+        },
       },
       caseStudyTemplates: {
         brandIdentity: {
@@ -312,6 +338,32 @@ export const translations = {
             "A kihívás számomra az volt, hogy a márka sokszínűségét, precizitását és magas minőségét úgy jelenítsem meg, hogy közben harmonikusan ötvözze a hagyományos értékeket a modern stílussal.",
           solution:
             "Az arculatot egy elegáns jelrendszerre, harmonikus színhasználatra és egységes digitális megjelenésre építettem. A végeredmény modern, következetes és könnyen felismerhető márkajelenlét, amely támogatja a Gibi Gyöngy hazai és nemzetközi láthatóságának növelését.",
+        },
+        mazur: {
+          overview:
+            "A Mazur burkolással, fürdőszobákkal és építőipari kivitelezéssel foglalkozó vállalkozás. Az arculatnál fontos volt, hogy a megjelenés egyszerre legyen letisztult, szakmai és könnyen felismerhető.",
+          services: [
+            "Logótervezés",
+            "Arculatterv",
+            "Vizuális alkalmazások",
+          ],
+          challenge:
+            "A kihívás az volt, hogy a burkolatok, fürdőszobai részletek és precíz kivitelezés világából olyan egyszerű jel szülessen, amely nem túl direkt, mégis azonnal kapcsolódik a márka tevékenységéhez.",
+          solution:
+            "A lefolyórács geometrikus ritmusából indultam ki, majd ezt alakítottam át egy tiszta, jól skálázható logójellé. Ehhez visszafogott színhasználatot, modern tipográfiát és könnyen alkalmazható vizuális rendszert építettem.",
+        },
+        hermonKertepites: {
+          overview:
+            "A Hermon Kertépítés egy kertépítéssel foglalkozó márka, amelynek neve a bibliai Hermon hegyre utal. A név egyszerre hordozza a bőség, a víz, a frissesség és az élettel teli természet jelentését.",
+          services: [
+            "Arculatterv",
+            "Logótervezés",
+            "Vizuális alkalmazások",
+          ],
+          challenge:
+            "A kihívás az volt, hogy ezekből a szimbolikus elemekből olyan arculat szülessen, amely közvetlen, természetes és könnyen felismerhető marad egy kertépítő vállalkozás számára.",
+          solution:
+            "A logót egy egyszerű hegyforma, felfelé törő vízcseppek és organikus ívek rendszerére építettem. A friss zöld színpaletta és a letisztult alkalmazások természetközeli, bizalomépítő és emlékezetes megjelenést adnak a márkának.",
         },
       },
       caseStudyTemplates: {

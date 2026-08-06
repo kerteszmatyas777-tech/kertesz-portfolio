@@ -24,6 +24,10 @@ export default function ProjectPageContent({ project, nextProject }: Props) {
       ? projectTranslations.caseStudies.kerteszSzigszer
       : project.slug === "gibi-gyongy"
         ? projectTranslations.caseStudies.gibiGyongy
+      : project.slug === "mazur"
+        ? projectTranslations.caseStudies.mazur
+      : project.slug === "hermon-kertepites"
+        ? projectTranslations.caseStudies.hermonKertepites
       : projectTranslations.caseStudyTemplates[project.categoryKey];
   const overview = caseStudy.overview || project.overview;
   const services = caseStudy.services.length ? caseStudy.services : project.services;
