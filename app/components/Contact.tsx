@@ -107,7 +107,7 @@ export default function Contact() {
 
               <a
                 href="mailto:kerteszmatyas777@gmail.com"
-                className="mt-10 block max-w-full break-words text-[clamp(1.15rem,5.5vw,2rem)] font-bold leading-tight tracking-[-0.03em] text-[var(--primary)] transition hover:opacity-70"
+                className="mt-10 block max-w-full break-words text-[clamp(1rem,4.9vw,2rem)] font-bold leading-tight tracking-[-0.03em] text-[var(--primary)] transition [overflow-wrap:anywhere] hover:opacity-70 sm:text-[clamp(1.25rem,4vw,2rem)]"
               >
                 kerteszmatyas777@gmail.com
               </a>

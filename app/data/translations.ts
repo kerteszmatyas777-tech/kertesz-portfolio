@@ -231,23 +231,32 @@ export const translations = {
       title: "What people say about working with me",
       description:
         "Feedback from projects where clear thinking, refined visuals and a reliable process mattered just as much as the final design.",
+      previous: "Previous testimonial",
+      next: "Next testimonial",
+      goTo: "Go to testimonial",
       items: [
         {
           project: "Brand Identity",
           quote:
             "Mátyás quickly understood what we wanted to communicate and turned it into a clear, professional visual direction.",
+          name: "Gibi Gyöngy",
+          role: "Bead webshop",
           context: "Visual identity and brand applications",
         },
         {
           project: "Logo Design",
           quote:
             "The final logo felt simple, memorable and easy to use across the places where our brand needs to appear.",
+          name: "Kertész Szigszer",
+          role: "Insulation and sheet metal company",
           context: "Logo system and practical rollout",
         },
         {
           project: "Digital Presence",
           quote:
             "The process was thoughtful and calm from start to finish. Every detail had a reason behind it.",
+          name: "Hermon Kertépítés",
+          role: "Landscaping brand",
           context: "Social media and visual communication",
         },
       ],
@@ -538,23 +547,32 @@ export const translations = {
       title: "Ezeket mondták rólam",
       description:
         "Néhány gondolat olyan közös munkákból, ahol a tiszta gondolkodás, az igényes vizuális világ és a megbízható folyamat egyaránt fontos volt.",
+      previous: "Előző visszajelzés",
+      next: "Következő visszajelzés",
+      goTo: "Ugrás a visszajelzéshez",
       items: [
         {
           project: "Arculatterv",
           quote:
             "Mátyás gyorsan megértette, mit szeretnénk közvetíteni, és ezt egy tiszta, professzionális vizuális iránnyá formálta.",
+          name: "Gibi Gyöngy",
+          role: "Gyöngy webshop",
           context: "Arculat és vizuális alkalmazások",
         },
         {
           project: "Logótervezés",
           quote:
             "A végső logó egyszerű, emlékezetes és könnyen használható lett minden olyan felületen, ahol a márkánk megjelenik.",
+          name: "Kertész Szigszer",
+          role: "Szigetelő és bádogozó cég",
           context: "Logórendszer és gyakorlati alkalmazás",
         },
         {
           project: "Digitális megjelenés",
           quote:
             "A közös munka végig átgondolt és nyugodt volt. Minden részlet mögött volt egy világos döntés.",
+          name: "Hermon Kertépítés",
+          role: "Kertépítő márka",
           context: "Social media és vizuális kommunikáció",
         },
       ],

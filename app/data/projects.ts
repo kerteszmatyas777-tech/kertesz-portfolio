@@ -27,52 +27,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Kertész Szigszer",
-    slug: "kertesz-szigszer",
-    category: "Brand Identity",
-    categoryKey: "brandIdentity",
-    categoryLabel: {
-      en: "Logo Design",
-      hu: "Logótervezés",
-    },
-    image: "/projects/kertesz.jpg",
-
-    year: "2025",
-    client: "Kertész Szigszer",
-
-    services: [
-      "Logo Design",
-      "T-shirt Printing",
-    ],
-
-    colors: [
-      "#144422",
-      "#94865F",
-      "#1E1E1C",
-      "#EFEFEF",
-    ],
-
-    overview:
-      "Kertész Szigszer is an insulation and sheet metal company providing professional services in the field of mechanical insulation.",
-
-    challenge:
-      "The goal was to create a modern and easily recognisable logo for Kertész Szigszer Kft. that communicates trust and works clearly on workwear.",
-
-    solution:
-      "I designed a clean, structured logo and prepared the T-shirt print application, giving the company a professional and recognisable workwear presence.",
-
-    gallery: [
-      "/projects/kertesz-szigszer/kertesz-szigszer-gallery-01.png",
-      "/projects/kertesz-szigszer/kertesz-szigszer-03.png",
-      "/projects/kertesz-szigszer/kertesz-szigszer-07.png",
-      "/projects/kertesz-szigszer/kertesz-szigszer-02.png",
-      "/projects/kertesz-szigszer/kertesz-szigszer-04.png",
-      "/projects/kertesz-szigszer/kertesz-szigszer-01.png",
-    ],
-    galleryLayout: "wideGrid",
-  },
-
-  {
     title: "Gibi Gyöngy",
     slug: "gibi-gyongy",
     category: "Brand Identity",
@@ -165,6 +119,52 @@ export const projects: Project[] = [
     challenge: "",
     solution: "",
     gallery: [],
+  },
+
+  {
+    title: "Kertész Szigszer",
+    slug: "kertesz-szigszer",
+    category: "Brand Identity",
+    categoryKey: "brandIdentity",
+    categoryLabel: {
+      en: "Logo Design",
+      hu: "Logótervezés",
+    },
+    image: "/projects/kertesz.jpg",
+
+    year: "2025",
+    client: "Kertész Szigszer",
+
+    services: [
+      "Logo Design",
+      "T-shirt Printing",
+    ],
+
+    colors: [
+      "#144422",
+      "#94865F",
+      "#1E1E1C",
+      "#EFEFEF",
+    ],
+
+    overview:
+      "Kertész Szigszer is an insulation and sheet metal company providing professional services in the field of mechanical insulation.",
+
+    challenge:
+      "The goal was to create a modern and easily recognisable logo for Kertész Szigszer Kft. that communicates trust and works clearly on workwear.",
+
+    solution:
+      "I designed a clean, structured logo and prepared the T-shirt print application, giving the company a professional and recognisable workwear presence.",
+
+    gallery: [
+      "/projects/kertesz-szigszer/kertesz-szigszer-gallery-01.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-03.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-07.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-02.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-04.png",
+      "/projects/kertesz-szigszer/kertesz-szigszer-01.png",
+    ],
+    galleryLayout: "wideGrid",
   },
 
   {
