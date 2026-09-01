@@ -44,24 +44,36 @@ export default function FAQ() {
               <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
                 {t.externalIntro}{" "}
                 <a
-                  href="https://www.instagram.com/kerteszmatyas_grafikus/"
+                  href="https://schema.org"
                   target="_blank"
                   rel="noreferrer"
                   className="font-semibold text-[var(--primary)] underline decoration-[var(--primary)]/25 underline-offset-4 transition-colors hover:decoration-[var(--primary)]"
                 >
-                  Instagram
+                  Schema.org
                 </a>{" "}
                 {t.externalMiddle}{" "}
                 <a
-                  href="https://www.linkedin.com/in/m%C3%A1ty%C3%A1s-kert%C3%A9sz-89856a267"
+                  href="https://developers.google.com/search/docs"
                   target="_blank"
                   rel="noreferrer"
                   className="font-semibold text-[var(--primary)] underline decoration-[var(--primary)]/25 underline-offset-4 transition-colors hover:decoration-[var(--primary)]"
                 >
-                  LinkedIn
+                  Google Search Central
                 </a>
                 .
               </p>
+
+              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+                {t.relatedLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--primary)]/75 transition-colors hover:text-[var(--primary)]"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

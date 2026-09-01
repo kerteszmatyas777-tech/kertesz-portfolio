@@ -293,8 +293,27 @@ export const translations = {
             " with your goal, timeline and the type of design support you need.",
         },
       ],
-      externalIntro: "You can also find current work on",
-      externalMiddle: "and professional background on",
+      externalIntro:
+        "For web projects, I keep technical foundations aligned with structured data references from",
+      externalMiddle: "and search documentation from",
+      relatedLinks: [
+        {
+          href: "/services/print-design",
+          label: "Print design",
+        },
+        {
+          href: "/services/web-design",
+          label: "Web design",
+        },
+        {
+          href: "/projects/mazur",
+          label: "Mazur",
+        },
+        {
+          href: "/projects/kertesz-szigszer",
+          label: "Kertész Szigszer",
+        },
+      ],
     },
 
     contact: {
@@ -644,8 +663,27 @@ export const translations = {
             " keresztül a célról, a határidőről és arról, milyen vizuális segítségre van szükséged.",
         },
       ],
-      externalIntro: "Friss munkákat találsz az",
-      externalMiddle: "oldalamon, a szakmai hátteremet pedig a",
+      externalIntro:
+        "Webes munkáknál a technikai alapokat olyan strukturált adatforrásokhoz igazítom, mint a",
+      externalMiddle: "és olyan keresési útmutatókhoz, mint a",
+      relatedLinks: [
+        {
+          href: "/services/print-design",
+          label: "Nyomtatott kommunikáció",
+        },
+        {
+          href: "/services/web-design",
+          label: "Webdesign",
+        },
+        {
+          href: "/projects/mazur",
+          label: "Mazur",
+        },
+        {
+          href: "/projects/kertesz-szigszer",
+          label: "Kertész Szigszer",
+        },
+      ],
     },
 
     contact: {
