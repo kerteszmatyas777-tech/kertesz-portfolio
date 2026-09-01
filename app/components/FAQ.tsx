@@ -63,6 +63,28 @@ export default function FAQ() {
                 .
               </p>
 
+              <div className="mt-10">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary)]/55">
+                  {t.relatedTitle}
+                </p>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  {t.relatedCards.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="group border-t border-[var(--primary)]/12 pt-4"
+                    >
+                      <span className="block text-base font-semibold text-[var(--primary)] transition-opacity group-hover:opacity-65">
+                        {link.label}
+                      </span>
+                      <span className="mt-2 block text-sm leading-6 text-slate-500">
+                        {link.description}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
                 {t.relatedLinks.map((link) => (
                   <Link

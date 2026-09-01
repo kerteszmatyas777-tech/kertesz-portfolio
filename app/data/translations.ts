@@ -296,6 +296,45 @@ export const translations = {
       externalIntro:
         "For web projects, I keep technical foundations aligned with structured data references from",
       externalMiddle: "and search documentation from",
+      relatedTitle: "Related pages",
+      relatedCards: [
+        {
+          href: "/services/brand-identity",
+          label: "Brand identity",
+          description:
+            "A focused identity system for businesses that need a clearer and more recognisable visual presence.",
+        },
+        {
+          href: "/services/print-design",
+          label: "Print design",
+          description:
+            "Editorial layouts, posters and printed communication shaped with hierarchy and production in mind.",
+        },
+        {
+          href: "/services/digital-content",
+          label: "Social media",
+          description:
+            "Digital content systems that help a brand stay consistent across campaigns and everyday posts.",
+        },
+        {
+          href: "/services/web-design",
+          label: "Web design",
+          description:
+            "Considered digital page structures that turn a visual identity into a clear online experience.",
+        },
+        {
+          href: "/projects/gibi-gyongy",
+          label: "Gibi Gyöngy case study",
+          description:
+            "A bead webshop identity built around a refined symbol, colour system and social media direction.",
+        },
+        {
+          href: "/projects/hermon-kertepites",
+          label: "Hermon Kertépítés case study",
+          description:
+            "A garden-building identity inspired by mountain, water and abundance as natural brand signals.",
+        },
+      ],
       relatedLinks: [
         {
           href: "/services/print-design",
@@ -666,6 +705,45 @@ export const translations = {
       externalIntro:
         "Webes munkáknál a technikai alapokat olyan strukturált adatforrásokhoz igazítom, mint a",
       externalMiddle: "és olyan keresési útmutatókhoz, mint a",
+      relatedTitle: "Kapcsolódó oldalak",
+      relatedCards: [
+        {
+          href: "/services/brand-identity",
+          label: "Arculatterv",
+          description:
+            "Átgondolt vizuális rendszer vállalkozásoknak, amelyek felismerhetőbb márkajelenlétet szeretnének.",
+        },
+        {
+          href: "/services/print-design",
+          label: "Nyomtatott kommunikáció",
+          description:
+            "Kiadványok, plakátok és nyomtatott anyagok tiszta hierarchiával és gyártási szemlélettel.",
+        },
+        {
+          href: "/services/digital-content",
+          label: "Digitális megjelenés",
+          description:
+            "Social media és kampányrendszerek, amelyek következetessé teszik a márka online jelenlétét.",
+        },
+        {
+          href: "/services/web-design",
+          label: "Webdesign",
+          description:
+            "Letisztult weboldalstruktúrák, amelyek a vizuális arculatból érthető online élményt építenek.",
+        },
+        {
+          href: "/projects/gibi-gyongy",
+          label: "Gibi Gyöngy esettanulmány",
+          description:
+            "Gyöngy webshop arculata elegáns jelrendszerrel, színhasználattal és social media iránnyal.",
+        },
+        {
+          href: "/projects/hermon-kertepites",
+          label: "Hermon Kertépítés esettanulmány",
+          description:
+            "Kertépítő márka, amely a hegy, a víz és a bőség természetközeli jelentésére épül.",
+        },
+      ],
       relatedLinks: [
         {
           href: "/services/print-design",
