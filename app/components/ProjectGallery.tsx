@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Lightbox from "./Lightbox";
 
@@ -206,21 +207,34 @@ function GalleryButton({
   priority?: boolean;
   onClick: () => void;
 }) {
+  const shouldReduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll();
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-2%", "2%"]);
+
   return (
-    <button
+    <motion.button
       type="button"
       onClick={onClick}
       aria-label={label}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 70, clipPath: "inset(10% 0 0 0)" }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)" }}
+      viewport={{ once: true, amount: 0.2, margin: "0px 0px -8% 0px" }}
+      transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
       className={`group relative block w-full overflow-hidden text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--primary)] ${className}`}
     >
-      <Image
-        src={image}
-        alt={alt}
-        fill
-        priority={priority}
-        sizes="(min-width: 768px) 50vw, 100vw"
-        className="object-cover transition duration-700 group-hover:scale-105"
-      />
-    </button>
+      <motion.div
+        className="absolute inset-0 transition duration-700 group-hover:scale-105"
+        style={shouldReduceMotion ? undefined : { y: imageY }}
+      >
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </motion.div>
+    </motion.button>
   );
 }

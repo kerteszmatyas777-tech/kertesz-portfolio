@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import FadeIn from "./FadeIn";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
 import type { ServiceSlug } from "../data/services";
@@ -28,19 +29,22 @@ export default function ServicePageContent({ slug }: Props) {
           <div className="absolute inset-60 rounded-full bg-[#C9CADF] opacity-[0.18]" />
         </div>
 
-        <div className="relative mx-auto max-w-[1600px] px-6 pb-24 pt-36 lg:px-24 lg:pb-36 lg:pt-48">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--primary)]/65">
-            {t.services.eyebrow}
-          </p>
+        <FadeIn
+          amount={0.01}
+          className="relative mx-auto max-w-[1600px] px-6 pb-24 pt-36 lg:px-24 lg:pb-36 lg:pt-48"
+        >
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--primary)]/65">
+              {t.services.eyebrow}
+            </p>
 
-          <h1 className="mt-6 max-w-4xl break-words text-5xl font-bold leading-[0.92] tracking-[-0.05em] text-[var(--primary)] md:text-7xl">
-            {service.title}
-          </h1>
+            <h1 className="mt-6 max-w-4xl break-words text-5xl font-bold leading-[0.92] tracking-[-0.05em] text-[var(--primary)] md:text-7xl">
+              {service.title}
+            </h1>
 
-          <p className="mt-10 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl md:leading-9">
-            {service.description}
-          </p>
-        </div>
+            <p className="mt-10 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl md:leading-9">
+              {service.description}
+            </p>
+        </FadeIn>
       </section>
 
       <section className="mx-auto max-w-[1200px] px-6 py-24 lg:px-0 lg:py-32">
@@ -49,9 +53,11 @@ export default function ServicePageContent({ slug }: Props) {
             {t.services.page.outcome}
           </p>
 
-          <p className="max-w-3xl text-2xl leading-10 tracking-[-0.02em] text-[var(--primary)] md:text-3xl md:leading-[1.35]">
-            {service.intro}
-          </p>
+          <FadeIn>
+            <p className="max-w-3xl text-2xl leading-10 tracking-[-0.02em] text-[var(--primary)] md:text-3xl md:leading-[1.35]">
+              {service.intro}
+            </p>
+          </FadeIn>
         </div>
 
         <div className="mt-24 grid gap-10 lg:grid-cols-[220px_1fr] lg:gap-16">
@@ -59,7 +65,7 @@ export default function ServicePageContent({ slug }: Props) {
             {t.services.page.deliverables}
           </p>
 
-          <div className="overflow-hidden rounded-[12px] border border-[var(--primary)]/10 bg-white">
+          <FadeIn className="overflow-hidden rounded-[12px] border border-[var(--primary)]/10 bg-white">
             {service.deliverables.map((item) => (
               <div
                 key={item}
@@ -69,10 +75,10 @@ export default function ServicePageContent({ slug }: Props) {
                 <p className="text-lg leading-8 text-slate-700">{item}</p>
               </div>
             ))}
-          </div>
+          </FadeIn>
         </div>
 
-        <div className="mt-24 rounded-[14px] bg-[var(--primary)] px-7 py-10 text-white md:px-12 md:py-14">
+        <FadeIn className="mt-24 rounded-[14px] bg-[var(--primary)] px-7 py-10 text-white md:px-12 md:py-14">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold leading-[0.98] tracking-[-0.04em] md:text-5xl">
               {t.services.page.ctaTitle}
@@ -87,7 +93,7 @@ export default function ServicePageContent({ slug }: Props) {
               {t.services.page.cta}
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </main>
   );
