@@ -1,0 +1,27 @@
+# Kertesz Matyas Portfolio
+
+This site presents the portfolio of Kertesz Matyas, a Hungary-based brand identity and graphic designer.
+
+Primary URL: https://www.kerteszmatyas.hu
+
+## What The Site Covers
+
+- Brand identity and logo design
+- Print design and editorial communication
+- Social media and digital visual systems
+- Web design direction
+- Selected case studies for businesses and cultural projects
+
+## Important Pages
+
+- Homepage: https://www.kerteszmatyas.hu
+- Gibi Gyongy case study: https://www.kerteszmatyas.hu/projects/gibi-gyongy
+- Mazur case study: https://www.kerteszmatyas.hu/projects/mazur
+- Kertesz Szigszer case study: https://www.kerteszmatyas.hu/projects/kertesz-szigszer
+- Hermon Kertepites case study: https://www.kerteszmatyas.hu/projects/hermon-kertepites
+
+## Contact
+
+Email: kerteszmatyas777@gmail.com
+
+The site is bilingual, with English and Hungarian interface content.

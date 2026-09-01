@@ -144,7 +144,6 @@ export const translations = {
       stats: {
         projects: "Projects",
         years: "Years",
-        custom: "Custom",
       },
     },
 
@@ -260,6 +259,42 @@ export const translations = {
           context: "Social media and visual communication",
         },
       ],
+    },
+
+    faq: {
+      eyebrow: "Questions",
+      title: "A clear way to start",
+      items: [
+        {
+          question: "What kind of design projects can I help with?",
+          beforeLink:
+            "I help businesses with focused visual systems, from",
+          linkHref: "/services/brand-identity",
+          linkLabel: "brand identity",
+          afterLink:
+            " to print design, digital content and web design direction.",
+        },
+        {
+          question: "Can I see examples of my work?",
+          beforeLink:
+            "Yes. A good place to start is the",
+          linkHref: "/projects/gibi-gyongy",
+          linkLabel: "Gibi Gyöngy case study",
+          afterLink:
+            ", where you can see how the visual system works across several brand touchpoints.",
+        },
+        {
+          question: "How can a new project start?",
+          beforeLink:
+            "Send a short brief through the",
+          linkHref: "#project-brief",
+          linkLabel: "contact form",
+          afterLink:
+            " with your goal, timeline and the type of design support you need.",
+        },
+      ],
+      externalIntro: "You can also find current work on",
+      externalMiddle: "and professional background on",
     },
 
     contact: {
@@ -460,7 +495,6 @@ export const translations = {
       stats: {
         projects: "projekt",
         years: "év tapasztalat",
-        custom: "egyedi",
       },
     },
 
@@ -576,6 +610,42 @@ export const translations = {
           context: "Social media és vizuális kommunikáció",
         },
       ],
+    },
+
+    faq: {
+      eyebrow: "Kérdések",
+      title: "Így indulhatunk el",
+      items: [
+        {
+          question: "Milyen tervezési munkákban tudok segíteni?",
+          beforeLink:
+            "Olyan vállalkozásokkal dolgozom, akiknek átgondolt vizuális rendszerre van szükségük, az",
+          linkHref: "/services/brand-identity",
+          linkLabel: "arculattervtől",
+          afterLink:
+            " a nyomtatott kommunikáción, digitális megjelenésen és webdesign irányon át.",
+        },
+        {
+          question: "Hol tudod megnézni a korábbi munkáimat?",
+          beforeLink:
+            "Érdemes a",
+          linkHref: "/projects/gibi-gyongy",
+          linkLabel: "Gibi Gyöngy esettanulmánnyal",
+          afterLink:
+            " kezdeni, mert jól látszik benne, hogyan épül fel egy következetes márkajelenlét több felületen.",
+        },
+        {
+          question: "Hogyan tudunk elkezdeni egy közös projektet?",
+          beforeLink:
+            "Írj néhány sort a",
+          linkHref: "#project-brief",
+          linkLabel: "kapcsolati űrlapon",
+          afterLink:
+            " keresztül a célról, a határidőről és arról, milyen vizuális segítségre van szükséged.",
+        },
+      ],
+      externalIntro: "Friss munkákat találsz az",
+      externalMiddle: "oldalamon, a szakmai hátteremet pedig a",
     },
 
     contact: {

@@ -29,7 +29,7 @@ export default function About() {
             {t.about.description}
           </p>
 
-          <div className="grid grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-2 gap-8 mt-12 max-w-md">
 
             <div>
               <h3 className="text-4xl font-bold text-[var(--primary)]">50+</h3>
@@ -39,11 +39,6 @@ export default function About() {
             <div>
               <h3 className="text-4xl font-bold text-[var(--primary)]">4+</h3>
               <p className="text-slate-500 mt-2">{t.about.stats.years}</p>
-            </div>
-
-            <div>
-              <h3 className="text-4xl font-bold text-[var(--primary)]">100%</h3>
-              <p className="text-slate-500 mt-2">{t.about.stats.custom}</p>
             </div>
 
           </div>

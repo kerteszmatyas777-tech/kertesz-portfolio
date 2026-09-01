@@ -50,6 +50,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  other: {
+    "dateModified": "2026-09-01",
+  },
 };
 
 export default function RootLayout({
@@ -59,17 +62,58 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Kertész Mátyás",
-    url: "https://www.kerteszmatyas.hu",
-    email: "kerteszmatyas777@gmail.com",
-    description:
-      "Brand identity and graphic design for ambitious businesses in Hungary and beyond.",
-    areaServed: "Hungary",
-    sameAs: [
-      "https://www.instagram.com/kerteszmatyas_grafikus/",
-      "https://www.linkedin.com/in/m%C3%A1ty%C3%A1s-kert%C3%A9sz-89856a267",
-      "https://www.facebook.com/profile.php?id=61571713991529",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.kerteszmatyas.hu/#studio",
+        name: "Kertész Mátyás",
+        url: "https://www.kerteszmatyas.hu",
+        email: "kerteszmatyas777@gmail.com",
+        image: "https://www.kerteszmatyas.hu/images/profile-work.jpg",
+        description:
+          "Brand identity, logo design, print design and visual communication for ambitious businesses in Hungary and beyond.",
+        areaServed: "Hungary",
+        founder: {
+          "@id": "https://www.kerteszmatyas.hu/#person",
+        },
+        knowsAbout: [
+          "Brand identity",
+          "Logo design",
+          "Print design",
+          "Visual communication",
+          "Web design",
+        ],
+        sameAs: [
+          "https://www.instagram.com/kerteszmatyas_grafikus/",
+          "https://www.linkedin.com/in/m%C3%A1ty%C3%A1s-kert%C3%A9sz-89856a267",
+          "https://www.facebook.com/profile.php?id=61571713991529",
+        ],
+        datePublished: "2026-07-09",
+        dateModified: "2026-09-01",
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.kerteszmatyas.hu/#person",
+        name: "Kertész Mátyás",
+        jobTitle: "Brand Identity and Graphic Designer",
+        url: "https://www.kerteszmatyas.hu",
+        email: "kerteszmatyas777@gmail.com",
+        sameAs: [
+          "https://www.instagram.com/kerteszmatyas_grafikus/",
+          "https://www.linkedin.com/in/m%C3%A1ty%C3%A1s-kert%C3%A9sz-89856a267",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.kerteszmatyas.hu/#website",
+        name: "Kertész Mátyás Portfolio",
+        url: "https://www.kerteszmatyas.hu",
+        publisher: {
+          "@id": "https://www.kerteszmatyas.hu/#studio",
+        },
+        inLanguage: ["en", "hu"],
+        dateModified: "2026-09-01",
+      },
     ],
   };
 

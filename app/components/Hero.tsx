@@ -41,7 +41,9 @@ export default function Hero() {
           {t.hero.eyebrow}
         </motion.p>
 
-        <motion.h1
+        <motion.div
+          role="heading"
+          aria-level={1}
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -59,7 +61,7 @@ export default function Hero() {
               {line}
             </span>
           ))}
-        </motion.h1>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
